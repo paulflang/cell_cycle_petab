@@ -21,7 +21,7 @@ problems:
 - condition_files:
   - experimentalCondition_v3.0.0.tsv
   measurement_files:
-  - Stallaert_CellSystems2021_Data.tsv  # simulatedData_v3.0.0_0noise.tsv  # simulatedData_v3.0.0_0.1noise.tsv  # Stallaert_CellSystems2021_Data.tsv
+  - simulatedData_v3.0.0_0.1noise.tsv  # simulatedData_v3.0.0_0noise.tsv  # simulatedData_v3.0.0_0.1noise.tsv  # Stallaert_CellSystems2021_Data.tsv
   observable_files:
   - observables_v3.0.0.tsv
   sbml_files:
