@@ -1,0 +1,745 @@
+###
+#@creatorEmail:'paul.lang@wolfson.ox.ac.uk'
+#@creatorName:'Paul F Lang'
+#@notes:'This model is based on the model vell_cycle_v4.0.0 (see README for change log).'
+###
+begin model
+
+begin parameters
+	# Core parameters
+	kPhRbD 0.005544005544/6.022e23
+	kPhRbE 0.00693000693/6.022e23
+	kDpRb 0.001386001386
+	kPhRb 0.02079002079/6.022e23
+	kSyCe1 1.386001386e-05*6.022e23*2
+	kSyCe2 2.5039501039e08
+	kDeCe 0.0001386001386
+	kDiE2fRb 0.0003465003465
+	kAsE2fRb 0.3465003465/6.022e23
+	kSyE2f1 6.93000693e-06*6.022e23*2
+	kSyE2f2 4.1732501732e07
+	kDeE2f1 6.93000693e-05
+	kDeE2f2 0.001386001386/6.022e23
+	kPhE2f 0.001386001386/6.022e23
+	kDpE2f2 0.0693000693/6.022e23
+	kSyEmi1 3.465003465e-05*6.022e23*2
+	kSyEmi2 2.0866250866e08
+	kDeEmi1 0.0003465003465
+	kDeEmi2 0.0003465003465
+	kDeEmi3 0.003465003465
+	kPhEmiA 3.465003465e-05/6.022e23
+	kPhEmiB 0.00017325017325/6.022e23
+	kDpEmi 3.465003465e-06
+	kSyCa1 6.93000693e-06*6.022e23*2
+	kSyCa2 3.1299376296e07
+	kDeCa1 6.93000693e-06
+	kDeCa2 0.002772002772/6.022e23
+	kDeCa3 0.000693000693/6.022e23
+	kDpCdh 0.003465003465
+	kPhCdhA 0.01732501732/6.022e23
+	kPhCdhE 0.000693000693/6.022e23
+	kPhCdhB 0.1732501733/6.022e23
+	kDiACE 0.0003465003465
+	kAsACE 0.3465003465/6.022e23
+	kDiACdh 0.0003465003465
+	kAsACdh 0.3465003465/6.022e23
+	kPhCeA 0.00693000693/6.022e23
+	kPhCeE 6.93000693e-05/6.022e23
+	kPhFoxE 0.000693000693/6.022e23
+	kPhFoxA 0.000693000693/6.022e23
+	kPhFoxB 0.003465003465/6.022e23
+	kDpFox 1e-05
+	kSyCb1 6.93000693e-06*6.022e23*2
+	kSyCb2 3.1299376301e07
+	kDeCb1 6.93000693e-06
+	kDeCb2 0.00086625086625/6.022e23
+	kDeCb3 0.00086625086625/6.022e23
+	kPhEnsa 0.000693000693/6.022e23
+	kDpEnsa 0.0003465003465
+	kPhGw 0.00693000693/6.022e23
+	kDpGw1 0.0017325017325
+	kDpGw2 0.0693000693/6.022e23
+	kWee1 6.93000693e-05/6.022e23
+	kWee2 0.00693000693/6.022e23
+	kPhWeeA 0.000693000693/6.022e23
+	kPhWeeB 0.00693000693/6.022e23
+	kDpWee 0.0693000693/6.022e23
+	kCdc25_1 0.000693000693/6.022e23
+	kCdc25_2 0.00693000693/6.022e23
+	kDpCdc25 0.0693000693/6.022e23
+	kDipEB55 4.7124047124e-05
+	kAspEB55 0.39501039501/6.022e23
+	kSyCdc_1 6.93000693e-06*6.022e23*2
+	kSyCdc_2 4.1732501752e07
+	kDeCdc_1 2.772002772e-05
+	kDeCdc_2 0.0002772002772/6.022e23
+	kDipACdc 0.00086625086625
+	kAspACdc 0.00693000693/6.022e23
+	kPhApcA 6.93000693e-05/6.022e23
+	kPhApcB 6.93000693e-05/6.022e23
+	kDpApc_1 0/6.022e23
+	kDpApc_2 0.03465003465/6.022e23
+	kSyFox1 6.93000693e-06*6.022e23*2
+	kSyFox2 3.1299376296e07
+	kDeFox1 6.93000693e-06
+	kDeFox2 0.003465003465/6.022e23
+	kAsEPx 0.3465003465/6.022e23
+	kDiEPx 0.03465003465
+	kAsFPcb 0.3465003465/6.022e23
+	kDiFPcb 0.0693000693
+	kAsFPcdc 0.3465003465/6.022e23
+	kDiFPcdc 0.17325017325
+	kPhC25B 0.00693000693/6.022e23
+	kPhCAEE 0.00055440055/6.022e23  # former kPhCdhEf4
+	kPhCAEA 0.01386001385/6.022e23  # former kPhCdhAf4
+	kPhCAEB 0.13860013864/6.022e23  # former kPhCdhBf4
+	ikSyCb 1.0
+	kDpE2f1 0
+	kPhC25A 0/6.022e23
+    kSySkp2 1e-04*6.022e23*2
+    kDeSkp2_1 0.0001
+    kDeSkp2_2 0.002/6.022e23
+	kAsTP53PCDKN1A 0.3/6.022e23
+	kDiTP53PCDKN1A 0.15
+	kSyCDKN1A_1 1e-05*6.022e23*2
+	kSyCDKN1A_2 2.0349307325e08
+	kDeCDKN1A_1 0.00002
+    kDeCDKN1A_2 0.00025/6.022e23
+    kAsCdkn1aC 0.007/6.022e23
+	kDiCdkn1aC 0.0003  # Consider using different binding strength for different CKI/CDK complexes
+	kPhCDKN1AByCe 0.005/6.022e23
+	kPhCDKN1AByCa 0.0005/6.022e23
+	kPhCDKN1AByCb 0.005/6.022e23
+	kDpCDKN1A 0.002
+	kAsFOXOPCDKN1B 0.3/6.022e23
+	kDiFOXOPCDKN1B 0.15
+	kSyCDKN1B_1 1e-05*6.022e23*2
+	kSyCDKN1B_2 2.5436634157e07
+	kDeCDKN1B_1 0.00002
+	kDeCDKN1B_2 0.0025/6.022e23
+	kAsCdkn1bC 0.007/6.022e23
+    kDiCdkn1bC 0.0003
+	kPhCDKN1BByCe 0.005/6.022e23
+	kPhCDKN1BByCa 0.05/6.022e23
+	kPhCDKN1BByCb  0.0005/6.022e23
+	kDpCDKN1B 0.002
+	
+	# Transport parameters
+	kPhNup 1e-11/2
+	kDpNup_1 2
+	kImImCCND_1 1e9/6.022e23
+	kExImCCND_1 1e9/6.022e23
+	kImImCCNE_CDKN1A_B__1 1e9/6.022e23
+	kExImCCNE_CDKN1A_B__1 1e9/6.022e23
+	kImImE2F_DBD_RB1_Ser332u__1 1e9/6.022e23
+	kExImE2F_DBD_RB1_Ser332u__1 1e9/6.022e23
+	kImImE2F_DBD_RB1_Ser332p__1 1e9/6.022e23
+	kExImE2F_DBD_RB1_Ser332p__1 1e9/6.022e23
+	kImImCCNA_CDKN1A_B__1 1e9/6.022e23
+	kExImCCNA_CDKN1A_B__1 1e9/6.022e23
+	kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 1e9/6.022e23
+	kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1 1e9/6.022e23
+	kImImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 1e9/6.022e23
+	kExImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1 1e9/6.022e23
+	kImImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 1e9/6.022e23
+	kExImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1 1e9/6.022e23
+	kImImRB1_E2F_Ser807_Ser811u__1 1e9/6.022e23
+	kExImRB1_E2F_Ser807_Ser811u__1 1e9/6.022e23
+	kImImRB1_E2F_Ser807_Ser811p__1 1e9/6.022e23
+	kExImRB1_E2F_Ser807_Ser811p__1 1e9/6.022e23
+	kImImPPP2R2_ENSA_ARPP19__1 1e9/6.022e23
+	kExImPPP2R2_ENSA_ARPP19__1 1e9/6.022e23
+	kImImAPC_FBXO5_FZR1_CDC20_Ser355u__1 1e9/6.022e23
+	kExImAPC_FBXO5_FZR1_CDC20_Ser355u__1 1e9/6.022e23
+	kImImCDC20_APC__1 1e9/6.022e23
+	kExImCDC20_APC__1 1e9/6.022e23
+	kImImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 1e9/6.022e23
+	kExImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1 1e9/6.022e23
+	kImImAPC_FBXO5_FZR1_CDC20_Ser355p__1 1e9/6.022e23
+	kExImAPC_FBXO5_FZR1_CDC20_Ser355p__1 1e9/6.022e23
+	kImImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 1e9/6.022e23
+	kExImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1 1e9/6.022e23
+	kImImFZR1_APC_FBXO5_nTermu__1 1e9/6.022e23
+	kExImFZR1_APC_FBXO5_nTermu__1 1e9/6.022e23
+	kImImFZR1_APC_FBXO5_nTermp__1 1e9/6.022e23
+	kExImFZR1_APC_FBXO5_nTermp__1 1e9/6.022e23
+	kImImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 1e9/6.022e23
+	kExImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 1e9/6.022e23
+	kImImFBXO5_APC_FZR1_Ser182u__1 1e9/6.022e23
+	kExImFBXO5_APC_FZR1_Ser182u__1 1e9/6.022e23
+	kImImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 1e9/6.022e23
+	kExImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1 1e9/6.022e23
+	kImImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 1e9/6.022e23
+	kExImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1 1e9/6.022e23
+	kImImFBXO5_APC_FZR1_Ser182p__1 1e9/6.022e23
+	kExImFBXO5_APC_FZR1_Ser182p__1 1e9/6.022e23
+	kImImFOXM1_DBD_Thr600u__1 1e9/6.022e23
+	kExImFOXM1_DBD_Thr600u__1 1e9/6.022e23
+	kImImFOXM1_DBD_Thr600p__1 1e9/6.022e23
+	kExImFOXM1_DBD_Thr600p__1 1e9/6.022e23
+	kImImWEE1_Ser123u__1 1e9/6.022e23
+	kExImWEE1_Ser123u__1 1e9/6.022e23
+	kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 1e9/6.022e23
+	kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1 1e9/6.022e23
+	kImImWEE1_Ser123p__1 1e9/6.022e23
+	kExImWEE1_Ser123p__1 1e9/6.022e23
+	kImImCDC25_pSitesp__1 1e9/6.022e23
+	kExImCDC25_pSitesp__1 1e9/6.022e23
+	kImImCDC25_pSitesu__1 1e9/6.022e23
+	kExImCDC25_pSitesu__1 1e9/6.022e23
+	kImImMASTL_Thr198u__1 1e9/6.022e23
+	kExImMASTL_Thr198u__1 1e9/6.022e23
+	kImImMASTL_Thr198p__1 1e9/6.022e23
+	kExImMASTL_Thr198p__1 1e9/6.022e23
+	kImImENSA_ARPP19_PPP2R2_Ser62_Ser67u__1 1e9/6.022e23
+	kExImENSA_ARPP19_PPP2R2_Ser62_Ser67u__1 1e9/6.022e23
+	kImImENSA_ARPP19_PPP2R2_Ser62_Ser67p__1 1e9/6.022e23
+	kExImENSA_ARPP19_PPP2R2_Ser62_Ser67p__1 1e9/6.022e23
+	kImImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__1 1e9/6.022e23
+	kExImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__1 1e9/6.022e23
+	kImImSKP2_1 1e9/6.022e23
+	kExImSKP2_1 1e9/6.022e23
+	kImImTP53_DBD_Ser15p__1 1e9/6.022e23
+	kExImTP53_DBD_Ser15p__1 1e9/6.022e23
+	kImImFOXO_DBD__1 1e9/6.022e23
+	kExImFOXO_DBD__1 1e9/6.022e23
+	kImImCDKN1A_CCNE_A_B_Ser130u__1 1e9/6.022e23
+	kExImCDKN1A_CCNE_A_B_Ser130u__1 1e9/6.022e23
+	kImImCDKN1B_CCNE_A_Thr187u__1 1e9/6.022e23
+	kExImCDKN1B_CCNE_A_Thr187u__1 1e9/6.022e23
+	kImImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kExImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kImImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kExImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1 1e9/6.022e23
+	kImImCDKN1A_CCNE_A_B_Ser130p__1 1e9/6.022e23
+	kExImCDKN1A_CCNE_A_B_Ser130p__1 1e9/6.022e23
+	kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 1e9/6.022e23
+	kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 1e9/6.022e23
+	kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 1e9/6.022e23
+	kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1 1e9/6.022e23
+	kImImCDKN1B_CCNE_A_Thr187p__1 1e9/6.022e23
+	kExImCDKN1B_CCNE_A_Thr187p__1 1e9/6.022e23
+	kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 1e9/6.022e23
+	kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 1e9/6.022e23
+	kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 1e9/6.022e23
+	kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1 1e9/6.022e23
+	kIm_2 1e10/6.022e23
+	kEx_2 1e10/6.022e23
+	
+#	# Synthesis of constant species
+#	kSyCCND 2e-6*6.022e23
+#	kDeCCND 1.0*1e-6
+#	kSyFZR1 2e-6*6.022e23
+#	kDeFZR1 1.0*1e-6
+#	kSyTP53 0
+#	kDeTP53 1.0*1e-6
+#	kSyCDC25 2e-6*6.022e23
+#	kDeCDC25 1.0*1e-6
+#	kSyWEE1 2e-6*6.022e23
+#	kDeWEE1 1.0*1e-6
+#	kSyPPP2R2 2e-6*6.022e23
+#	kDePPP2R2 4.0*1e-6
+#	kSyMASTL 2e-6*6.022e23
+#	kDeMASTL 1.0*1e-6
+#	kSyENSA_ARPP19 2e-6*6.022e23
+#	kDeENSA_ARPP19 1.0*1e-6
+end parameters
+
+begin compartments
+	# volume units: L
+	# I am assuming a cell has cylindrical shape with 20 um radius and 2.5 um thickness
+    # http://book.bionumbers.org/how-big-is-a-human-cell/#:~:text=These%20cells%20have%20a%20characteristic,(BNID%20101711%2C%20101713).
+    # A_Plm = 2*16*pi*2.5+2*pi*20^2 ~ 2000 um^2 = 2000e-10 dm^2
+    # V_cell = pi*16^2*2.5 ~ 2000 um^3
+    # V_Nuc = V_cell/2
+    # A_nuc = 2*11*pi*2+2*pi*11^2 ~ 900 um^2
+    # Membrane thickness: ~1e-7 dm 
+	Plm 2 2e-14
+	Cyt 3 2e-12*0.5 Plm
+	Num 2 9e-15 Cyt
+	Nuc 3 2e-12*0.5 Num
+end compartments
+
+begin molecule types
+	E2F(DBD,RB1,Ser332~u~p)
+	RB1(E2F,Ser807_Ser811~u~p)
+	PPP2R2(ENSA_ARPP19)
+	CCNB_promoter(FOXM1)
+	CCNA(CDKN1A_B)
+	CCNA_promoter(E2F)
+	FOXM1_promoter(E2F)
+	ENSA_ARPP19(PPP2R2,Ser62_Ser67~u~p)
+	FZR1(APC,FBXO5,nTerm~u~p)
+	CCNE(CDKN1A_B)
+	MASTL(Thr198~u~p)
+	FBXO5_promoter(E2F)
+	CDC20_promoter(FOXM1)
+	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
+	FOXM1(DBD,Thr600~u~p)
+	WEE1(Ser123~u~p)
+	CCNE_promoter(E2F)
+	E2F_promoter(E2F)
+	CCND()
+	CDC20(APC)
+	CDC25(pSites~u~p)
+	CCNB(CDKN1A,CDK1_Thr14_Tyr15~u~p)
+	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
+	SKP2()
+	CDKN1A(CCNE_A_B,Ser130~u~p)
+	TP53(DBD,Ser15~u~p)
+	CDKN1A_promoter(TP53)
+	CDKN1B(CCNE_A,Thr187~u~p)
+	FOXO(DBD)
+	CDKN1B_promoter(FOXO)
+	NUP(pSites~u~p)
+end molecule types
+
+begin seed species
+	@Cyt:CCND() (1.0*6.022e11)  # Cd
+	@Cyt:CCNE(CDKN1A_B) (0.232249137*6.022e11)  # Ce
+	@Cyt:E2F(DBD,RB1,Ser332~u) (0.0184790235*6.022e11)  # E2f
+	@Cyt:E2F(DBD,RB1,Ser332~p) (3.8081857e-05*6.022e11)  # pE2f
+	@Cyt:CCNA(CDKN1A_B) (0.00702849494*6.022e11)  # Ca
+	@Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) (0.00188236293*6.022e11)  # Cb
+	@Cyt:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) (0.0714613324*6.022e11)  # E2fRb
+	@Cyt:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) (0.000150538592*6.022e11)  # pE2fRb
+	@Cyt:RB1(E2F,Ser807_Ser811~u) (0.0876426874*6.022e11)  # Rb
+	@Cyt:RB1(E2F,Ser807_Ser811~p) (0.840745442*6.022e11)  # pRb
+	@Cyt:PPP2R2(ENSA_ARPP19) (0.0771916254*6.022e11)  # B55
+	@Cyt:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*6.022e11)  # Apc
+	@Cyt:CDC20(APC) (0.229952789*6.022e11)  # Cdc20
+	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*6.022e11)  # Apc # This was added manually when checking for model correctness
+	@Cyt:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*6.022e11)  # pApc
+	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*6.022e11)  # ApcCdh
+	@Cyt:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*6.022e11)  # Cdh # Todo: set the initial value to whatever is in Yin Hoon's Excel sheet
+	@Cyt:FZR1(APC,FBXO5,nTerm~p) (0.16112308*6.022e11)  # pCdh
+	@Cyt:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*6.022e11)  # ACE
+	@Cyt:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*6.022e11)  # Emi
+	@Cyt:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*6.022e11)  # pACE
+	@Cyt:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*6.022e11)  # pApcCdh
+	@Cyt:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*6.022e11)  # pEmi
+	@Cyt:FOXM1(DBD,Thr600~u) (0.0055647336*6.022e11)  # Fox
+	@Cyt:FOXM1(DBD,Thr600~p) (0.00038111617*6.022e11)  # pFox
+	@Cyt:WEE1(Ser123~u) (0.980441633*6.022e11)  # Wee
+	@Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*6.022e11)  # pCb
+	@Cyt:WEE1(Ser123~p) (0.019558367*6.022e11)  # pWee
+	@Cyt:CDC25(pSites~p) (0.0184380668*6.022e11)  # pCdc25
+	@Cyt:CDC25(pSites~u) (0.981561933*6.022e11)  # Cdc25
+	@Cyt:MASTL(Thr198~u) (0.997525705*6.022e11)  # Gw
+	@Cyt:MASTL(Thr198~p) (0.00247429497*6.022e11)  # pGw
+	@Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) (0.826863064*6.022e11)  # Ensa
+	@Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) (0.000328561161*6.022e11)  # pEnsa
+	@Cyt:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) (0.172808375*6.022e11)  # pEB55
+	@Cyt:SKP2() (1*6.022e11)  # Ca
+	@Cyt:TP53(DBD,Ser15~p) (0*6.022e11)
+	@Cyt:FOXO(DBD) (1*6.022e11)
+	@Num:NUP(pSites~u) 3e3
+	@Nuc:CCND() (1.0*6.022e11)  # Cd
+	@Nuc:CCNE(CDKN1A_B) (0.232249137*6.022e11)  # Ce
+	@Nuc:E2F(DBD,RB1,Ser332~u) (0.0184790235*6.022e11)  # E2f
+	@Nuc:E2F(DBD,RB1,Ser332~p) (3.8081857e-05*6.022e11)  # pE2f
+	@Nuc:CCNA(CDKN1A_B) (0.00702849494*6.022e11)  # Ca
+	@Nuc:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) (0.00188236293*6.022e11)  # Cb
+	@Nuc:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) (0.0714613324*6.022e11)  # E2fRb
+	@Nuc:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) (0.000150538592*6.022e11)  # pE2fRb
+	@Nuc:RB1(E2F,Ser807_Ser811~u) (0.0876426874*6.022e11)  # Rb
+	@Nuc:RB1(E2F,Ser807_Ser811~p) (0.840745442*6.022e11)  # pRb
+	@Nuc:PPP2R2(ENSA_ARPP19) (0.0771916254*6.022e11)  # B55
+	@Nuc:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*6.022e11)  # Apc
+	@Nuc:CDC20(APC) (0.229952789*6.022e11)  # Cdc20
+	@Nuc:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*6.022e11)  # Apc # This was added manually when checking for model correctness
+	@Nuc:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*6.022e11)  # pApc
+	@Nuc:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*6.022e11)  # ApcCdh
+	@Nuc:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*6.022e11)  # Cdh
+	@Nuc:FZR1(APC,FBXO5,nTerm~p) (0.16112308*6.022e11)  # pCdh
+	@Nuc:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*6.022e11)  # ACE
+	@Nuc:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*6.022e11)  # Emi
+	@Nuc:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*6.022e11)  # pACE
+	@Nuc:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*6.022e11)  # pApcCdh
+	@Nuc:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*6.022e11)  # pEmi
+	@Nuc:FOXM1(DBD,Thr600~u) (0.0055647336*6.022e11)  # Fox
+	@Nuc:FOXM1(DBD,Thr600~p) (0.00038111617*6.022e11)  # pFox
+  	@Nuc:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) 0  # pFoxProCb
+  	@Nuc:CCNB_promoter(FOXM1) 2  # ProCb
+  	@Nuc:CDC20_promoter(FOXM1) 2  # ProCdc
+ 	@Nuc:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) 0  # pFoxProCdc
+	@Nuc:WEE1(Ser123~u) (0.980441633*6.022e11)  # Wee
+	@Nuc:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*6.022e11)  # pCb
+	@Nuc:WEE1(Ser123~p) (0.019558367*6.022e11)  # pWee
+	@Nuc:CDC25(pSites~p) (0.0184380668*6.022e11)  # pCdc25
+	@Nuc:CDC25(pSites~u) (0.981561933*6.022e11)  # Cdc25
+	@Nuc:MASTL(Thr198~u) (0.997525705*6.022e11)  # Gw
+	@Nuc:MASTL(Thr198~p) (0.00247429497*6.022e11)  # pGw
+	@Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) (0.826863064*6.022e11)  # Ensa
+	@Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) (0.000328561161*6.022e11)  # pEnsa
+	@Nuc:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) (0.172808375*6.022e11)  # pEB55
+ 	@Nuc:CCNE_promoter(E2F) 2  # ProCe
+ 	@Nuc:CCNA_promoter(E2F) 2  # ProCa
+ 	@Nuc:E2F_promoter(E2F) 2  # ProE2f
+ 	@Nuc:FBXO5_promoter(E2F) 2  # ProEmi
+ 	@Nuc:FOXM1_promoter(E2F) 2  # ProFox
+ 	@Nuc:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) 0  # E2fProCe
+ 	@Nuc:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) 0  # E2fProCa
+ 	@Nuc:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) 0  # E2fProE2f
+ 	@Nuc:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) 0  # E2fProEmi
+ 	@Nuc:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) 0  # E2fProFox
+	@Nuc:SKP2() (1*6.022e11)  # Ca
+	@Nuc:TP53(DBD,Ser15~p) (0*6.022e11)
+ 	@Nuc:CDKN1A_promoter(TP53) 2
+	@Nuc:FOXO(DBD) (1*6.022e11)
+ 	@Nuc:CDKN1B_promoter(FOXO) 2
+end seed species
+
+begin observables
+	# Cytoplasm
+	Species ab_cyt_CCNA2 @Cyt:CCNA()
+	Species ab_cyt_CCNB1 @Cyt:CCNB()
+	Species ab_cyt_CCNE1 @Cyt:CCNE()  # Todo: add CCNE2
+	Species ab_cyt_E2F1 @Cyt:E2F()  # Todo: add other E2Fs
+	Species ab_cyt_RB1_pSer807pSer811 @Cyt:RB1(Ser807_Ser811~p)
+	Species ab_cyt_FBXO5 @Cyt:FBXO5()
+	Species ab_cyt_MASTL_pThr198 @Cyt:MASTL(Thr198~p)
+	Species ab_cyt_CDC20 @Cyt:CDC20()
+	Species ab_cyt_WEE1_pSer123 @Cyt:WEE1(Ser123~p)
+	Species ab_cyt_FOXM1 @Cyt:FOXM1()
+	# Species ab_cyt_CDK1_pTyr15_to_ab_cyt_CDK1 @Cyt:CCNB(CDK1_Thr14_Tyr15~p)/@Cyt:CCNB()  # Todo: is CDK1:CCNB binding affected by CDK1 phosphorylation?
+	Species ab_cyt_CDKN1A @Cyt:CDKN1A()
+	Species ab_cyt_CCND1 @Cyt:CCND()  # Todo: add CCND2
+	Species ab_cyt_FZR1 @Cyt:FZR1()
+	Species ab_cyt_CDKN1B @Cyt:CDKN1B()
+	Species ab_cyt_TP53 @Cyt:TP53()
+	Species ab_cyt_SKP2 @Cyt:SKP2()
+	Species ab_cyt_CDKN1B_pThr187 @Cyt:CDKN1B(Thr187~p)
+	Species ab_cyt_E2F1_pSer332 @Cyt:E2F(Ser332~p)  # Todo: add other E2Fs
+	Species ab_cyt_CDC25A @Cyt:CDC25()  # Todo: add reactions for other CDC25s
+	Species ab_cyt_RB1_pThr373 @Cyt:RB1(Ser807_Ser811~p)  # Ser807_Ser811 seem to be phosphorylation priming sites. # Todo: use p sites of the best antibody we have.
+	Species ab_cyt_WEE1 @Cyt:WEE1()
+	Species ab_cyt_PPP2R2 @Cyt:PPP2R2()
+	Species ab_cyt_MASTL @Cyt:MASTL()
+	Species ab_cyt_ENSA_ARPP19 @Cyt:ENSA_ARPP19()
+	
+	# Nucleus
+	Species ab_nuc_CCNA2 @Nuc:CCNA()
+	Species ab_nuc_CCNB1 @Nuc:CCNB()
+	Species ab_nuc_CCNE1 @Nuc:CCNE()  # Todo: add CCNE2
+	Species ab_nuc_E2F1 @Nuc:E2F()  # Todo: add other E2Fs
+	Species ab_nuc_RB1_pSer807pSer811 @Nuc:RB1(Ser807_Ser811~p)
+	Species ab_nuc_FBXO5 @Nuc:FBXO5()
+	Species ab_nuc_MASTL_pThr198 @Nuc:MASTL(Thr198~p)
+	Species ab_nuc_CDC20 @Nuc:CDC20()
+	Species ab_nuc_WEE1_pSer123 @Nuc:WEE1(Ser123~p)
+	Species ab_nuc_FOXM1 @Nuc:FOXM1()
+	# Species ab_nuc_CDK1_pTyr15_to_ab_nuc_CDK1 @Nuc:CCNB(CDK1_Thr14_Tyr15~p)/@Nuc:CCNB()  # Todo: is CDK1:CCNB binding affected by CDK1 phosphorylation?
+	Species ab_nuc_CDKN1A @Nuc:CDKN1A()
+	Species ab_nuc_CCND1 @Nuc:CCND()  # Todo: add CCND2
+	Species ab_nuc_FZR1 @Nuc:FZR1()
+	Species ab_nuc_CDKN1B @Nuc:CDKN1B()
+	Species ab_nuc_TP53 @Nuc:TP53()
+	Species ab_nuc_SKP2 @Nuc:SKP2()
+	Species ab_nuc_CDKN1B_pThr187 @Nuc:CDKN1B(Thr187~p)
+	Species ab_nuc_E2F1_pSer332 @Nuc:E2F(Ser332~p)  # Todo: add other E2Fs
+	Species ab_nuc_CDC25A @Nuc:CDC25()  # Todo: add reactions for other CDC25s
+	Species ab_nuc_RB1_pThr373 @Nuc:RB1(Ser807_Ser811~p)  # Ser807_Ser811 seem to be phosphorylation priming sites. # Todo: use p sites of the best antibody we have.
+	Species ab_nuc_WEE1 @Nuc:WEE1()
+	Species ab_nuc_PPP2R2 @Nuc:PPP2R2()
+	Species ab_nuc_MASTL @Nuc:MASTL()
+	Species ab_nuc_ENSA_ARPP19 @Nuc:ENSA_ARPP19()
+end observables
+
+#begin functions
+#	rPhNup() (kPhNup*aCCNB)^10
+#end functions
+# 
+begin reaction rules
+	# Core rules
+    SyE2f1: 0 -> @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f1
+    AspFoxPcb: @Nuc:FOXM1(DBD,Thr600~p) + @Nuc:CCNB_promoter(FOXM1) <-> @Nuc:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) kAsFPcb,kDiFPcb
+    SyE2f2: @Nuc:E2F(DBD!1,RB1).E2F_promoter(E2F!1) -> @Nuc:E2F(DBD!1,RB1).E2F_promoter(E2F!1) + @Cyt:E2F(DBD,RB1,Ser332~u) kSyE2f2
+    DeE2f1: E2F(DBD!?,RB1!?,Ser332) -> 0  kDeE2f1 DeleteMolecules
+    PhRbE2fByCd: RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + CCND() -> RB1(E2F,Ser807_Ser811~p) + E2F(DBD,RB1,Ser332) + CCND() kPhRbD
+    PhRbE2fByCe: RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + CCNE(CDKN1A_B) -> RB1(E2F,Ser807_Ser811~p) + E2F(DBD,RB1,Ser332) + CCNE(CDKN1A_B) kPhRbE
+    PhRbE2fByCa: RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + CCNA(CDKN1A_B) -> RB1(E2F,Ser807_Ser811~p) + E2F(DBD,RB1,Ser332) + CCNA(CDKN1A_B) kPhRb
+    PhRbE2fByCb: RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> RB1(E2F,Ser807_Ser811~p) + E2F(DBD,RB1,Ser332) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
+    PhE2fByCa: E2F(DBD,RB1!?,Ser332~u) + CCNA(CDKN1A_B) -> E2F(DBD,RB1!?,Ser332~p) + CCNA(CDKN1A_B) kPhE2f
+    PhE2fByCb: E2F(DBD,RB1!?,Ser332~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> E2F(DBD,RB1!?,Ser332~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhE2f
+    DppE2f: E2F(DBD!?,RB1!?,Ser332~p) -> E2F(DBD!?,RB1!?,Ser332~u) kDpE2f1
+    DppE2fByB55: E2F(DBD,RB1!?,Ser332~p) + PPP2R2(ENSA_ARPP19) -> E2F(DBD,RB1!?,Ser332~u) + PPP2R2(ENSA_ARPP19) kDpE2f2
+    DeE2f2: E2F(DBD!?,RB1!?,Ser332~p) + SKP2() -> SKP2() kDeE2f2 DeleteMolecules
+    PhRbByCd: RB1(E2F,Ser807_Ser811~u) + CCND() -> RB1(E2F,Ser807_Ser811~p) + CCND() kPhRbD
+    PhRbByCe: RB1(E2F,Ser807_Ser811~u) + CCNE(CDKN1A_B) -> RB1(E2F,Ser807_Ser811~p) + CCNE(CDKN1A_B) kPhRbE
+    PhRbByCa: RB1(E2F,Ser807_Ser811~u) + CCNA(CDKN1A_B) -> RB1(E2F,Ser807_Ser811~p) + CCNA(CDKN1A_B) kPhRb
+    PhRbByCb: RB1(E2F,Ser807_Ser811~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> RB1(E2F,Ser807_Ser811~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
+    SyCe1: 0 -> @Cyt:CCNE(CDKN1A_B) kSyCe1
+    SyCa2: @Nuc:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) -> @Nuc:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) + @Cyt:CCNA(CDKN1A_B) kSyCa2
+    DeCe1: CCNE() -> 0  kDeCe DeleteMolecules
+    DeCe2: CCNE(CDKN1A_B) + CCNE() -> CCNE(CDKN1A_B) kPhCeE DeleteMolecules
+    DpRb: RB1(E2F,Ser807_Ser811~p) -> RB1(E2F,Ser807_Ser811~u) kDpRb # Todo: change once phospho-Rb:E2F complexes can exist.
+    DppApcCdc20_1: APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> APC(FZR1_CDC20,FBXO5,Ser355~u) + CDC20(APC) kDpApc_1
+    DppApcCdc20: APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) + PPP2R2(ENSA_ARPP19) -> APC(FZR1_CDC20,FBXO5,Ser355~u) + CDC20(APC) + PPP2R2(ENSA_ARPP19) kDpApc_2
+    PhApcByCa: APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + CCNA(CDKN1A_B) -> CCNA(CDKN1A_B) + APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
+    PhApcByCb: APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcB
+    DppApcByB55_1: APC(Ser355~p) -> APC(Ser355~u) kDpApc_1 exclude_reactants(1,CDC20())
+    DppApcByB55_2: APC(Ser355~p) + PPP2R2(ENSA_ARPP19) -> PPP2R2(ENSA_ARPP19) + APC(Ser355~u) kDpApc_2 exclude_reactants(1,CDC20()) 
+    PhCdhApcByCa: APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + CCNA(CDKN1A_B) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + CCNA(CDKN1A_B) kPhCdhA
+    PhCAEByCe: APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + CCNE(CDKN1A_B) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + FBXO5(APC,FZR1,Ser182~u) + CCNE(CDKN1A_B) kPhCAEE
+    PhCAEByCa: APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + CCNA(CDKN1A_B) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + FBXO5(APC,FZR1,Ser182~u) + CCNA(CDKN1A_B) kPhCAEA
+    PhCAEByCb: APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + FBXO5(APC,FZR1,Ser182~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCAEB
+    PhCdhApcByCe: APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + CCNE(CDKN1A_B) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + CCNE(CDKN1A_B) kPhCdhE
+    DeEmi1: FBXO5(APC!?,FZR1!?,Ser182) -> 0 kDeEmi1 DeleteMolecules
+    DeEmi2: FBXO5(APC!+,FZR1!+,Ser182~u) -> 0 kDeEmi2 DeleteMolecules # FZR1 is never in complex if phosphorylated. Ditto for Ser182.
+    PhEACByCa: APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + CCNA(CDKN1A_B) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + FBXO5(APC,FZR1,Ser182~p) + CCNA(CDKN1A_B) kPhEmiA
+    PhEACByCb: APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + FBXO5(APC,FZR1,Ser182~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhEmiB
+    PhEmiByCa: FBXO5(APC,FZR1,Ser182~u) + CCNA(CDKN1A_B) -> FBXO5(APC,FZR1,Ser182~p) + CCNA(CDKN1A_B) kPhEmiA
+    PhEmiByCb: FBXO5(APC,FZR1,Ser182~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> FBXO5(APC,FZR1,Ser182~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhEmiB
+    DppEmi: FBXO5(APC,FZR1,Ser182~p) -> FBXO5(APC,FZR1,Ser182~u) kDpEmi
+    DeEmi3: FBXO5(APC,FZR1,Ser182~p) -> 0  kDeEmi3 DeleteMolecules
+    SyFox1: 0 -> @Cyt:FOXM1(DBD,Thr600~u) kSyFox1
+    SyEmi2: @Nuc:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) -> @Nuc:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) + @Cyt:FBXO5(APC,FZR1,Ser182~u) kSyEmi2 # Check that E2f is not phosphorylated while in complex with promoters (could become kind of a dead end reaction)
+    PhCdhByCe: FZR1(APC,FBXO5,nTerm~u) + CCNE(CDKN1A_B) -> FZR1(APC,FBXO5,nTerm~p) + CCNE(CDKN1A_B) kPhCdhE
+    PhCdhByCa: FZR1(APC,FBXO5,nTerm~u) + CCNA(CDKN1A_B) -> FZR1(APC,FBXO5,nTerm~p) + CCNA(CDKN1A_B) kPhCdhA
+    PhCdhByCb: FZR1(APC,FBXO5,nTerm~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> FZR1(APC,FBXO5,nTerm~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
+    DppCdh: FZR1(APC,FBXO5,nTerm~p) -> FZR1(APC,FBXO5,nTerm~u) kDpCdh
+    SyCa1: 0 -> @Cyt:CCNA(CDKN1A_B) kSyCa1
+    DeCa1: CCNA() -> 0  kDeCa1 DeleteMolecules
+    DeCe3: CCNE() + CCNA(CDKN1A_B) -> CCNA(CDKN1A_B) kPhCeA DeleteMolecules
+    DeCa2: CCNA() + APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2 DeleteMolecules
+    DeCa3: CCNA() + APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3 DeleteMolecules
+    SyFox2: @Nuc:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) -> @Nuc:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) + @Cyt:FOXM1(DBD,Thr600~u) kSyFox2
+    DeFox: FOXM1(DBD!?,Thr600) -> 0 kDeFox1 DeleteMolecules
+    DeFoxByApcCdh: FOXM1(DBD,Thr600) + APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2 DeleteMolecules
+    PhFoxByCe: FOXM1(DBD,Thr600~u) + CCNE(CDKN1A_B) -> CCNE(CDKN1A_B) + FOXM1(DBD,Thr600~p) kPhFoxE
+    PhFoxByCa: FOXM1(DBD,Thr600~u) + CCNA(CDKN1A_B) -> CCNA(CDKN1A_B) + FOXM1(DBD,Thr600~p) kPhFoxA
+    PhFoxByCb: FOXM1(DBD,Thr600~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + FOXM1(DBD,Thr600~p) kPhFoxB
+    DppFox: FOXM1(DBD!?,Thr600~p) -> FOXM1(DBD!?,Thr600~u) kDpFox
+    SyCb1: 0 -> @Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
+    SyCb2: @Nuc:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @Nuc:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @Cyt:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
+    DeCb: CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1 DeleteMolecules
+    DeCbByApcCdh: CCNB(CDK1_Thr14_Tyr15) + APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCb2 DeleteMolecules
+    DeCbByApcCdc: CCNB(CDK1_Thr14_Tyr15) + APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCb3 DeleteMolecules
+    DeCdc: CDC20(APC!?) -> 0 kDeCdc_1 DeleteMolecules # Not 100% sure if this is specified correctly
+    DeCdcByApcCdh: CDC20(APC!?) + APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCdc_2 DeleteMolecules
+    SyCdc20_1: 0  -> @Cyt:CDC20(APC) kSyCdc_1
+    SyCdc20_2: @Nuc:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @Nuc:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) + @Cyt:CDC20(APC) kSyCdc_2
+    AspFoxPcdc: @Nuc:FOXM1(DBD,Thr600~p) + @Nuc:CDC20_promoter(FOXM1) <-> @Nuc:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) kAsFPcdc, kDiFPcdc
+    PhCbByWee: CCNB(CDK1_Thr14_Tyr15~u) + WEE1(Ser123~u) -> WEE1(Ser123~u) + CCNB(CDK1_Thr14_Tyr15~p) kWee2 # functionRate01() #Modifiers(iWee)
+    PhCbBypWee: CCNB(CDK1_Thr14_Tyr15~u) + WEE1(Ser123~p) -> WEE1(Ser123~p) + CCNB(CDK1_Thr14_Tyr15~p) kWee1 # functionRate02() #Modifiers(iWee)
+    DppCbBypCdc25: CCNB(CDK1_Thr14_Tyr15~p) + CDC25(pSites~p) -> CDC25(pSites~p) + CCNB(CDK1_Thr14_Tyr15~u) kCdc25_2
+    DppCbByCdc25: CCNB(CDK1_Thr14_Tyr15~p) + CDC25(pSites~u) -> CDC25(pSites~u) + CCNB(CDK1_Thr14_Tyr15~u) kCdc25_1
+    PhCdc25ByCb: CDC25(pSites~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + CDC25(pSites~p) kPhC25B
+    PhCdc25ByCa: CDC25(pSites~u) + CCNA(CDKN1A_B) -> CCNA(CDKN1A_B) + CDC25(pSites~p) kPhC25A
+    DppCdc25: CDC25(pSites~p) + PPP2R2(ENSA_ARPP19) -> PPP2R2(ENSA_ARPP19) + CDC25(pSites~u) kDpCdc25
+    DppWee: WEE1(Ser123~p) + PPP2R2(ENSA_ARPP19) -> PPP2R2(ENSA_ARPP19) + WEE1(Ser123~u) kDpWee
+    PhWeeByCa: WEE1(Ser123~u) + CCNA(CDKN1A_B) -> CCNA(CDKN1A_B) + WEE1(Ser123~p) kPhWeeA
+    PhWeeByCb: WEE1(Ser123~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + WEE1(Ser123~p) kPhWeeB
+    PhGw: MASTL(Thr198~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> MASTL(Thr198~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhGw
+    DppGw: MASTL(Thr198~p) -> MASTL(Thr198~u) kDpGw1
+    DppGwByB55: MASTL(Thr198~p) + PPP2R2(ENSA_ARPP19) -> PPP2R2(ENSA_ARPP19) + MASTL(Thr198~u) kDpGw2
+    PhEnsa: ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) + MASTL(Thr198~p) -> ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + MASTL(Thr198~p) kPhEnsa
+    DppEB55: ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) -> PPP2R2(ENSA_ARPP19) + ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) kDpEnsa
+    SyEmi1: 0 -> @Cyt:FBXO5(APC,FZR1,Ser182~u) kSyEmi1
+    SyCe2: @Nuc:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) -> @Nuc:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) + @Cyt:CCNE(CDKN1A_B) kSyCe2
+    PhCdhApcByCb: APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
+    AsE2fRb: E2F(DBD,RB1,Ser332) + RB1(E2F,Ser807_Ser811~u) <-> E2F(DBD,RB1!1,Ser332).RB1(E2F!1,Ser807_Ser811~u) kAsE2fRb,kDiE2fRb
+    AsApcCdh: APC(FZR1_CDC20,FBXO5,Ser355) + FZR1(APC,FBXO5,nTerm~u) <-> APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kAsACdh,kDiACdh
+    AsACE: APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + FBXO5(APC,FZR1,Ser182~u) <-> APC(FZR1_CDC20!1,FBXO5!2,Ser355).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) kAsACE,kDiACE
+    AspApcCdc20: APC(FZR1_CDC20,FBXO5,Ser355~p) + CDC20(APC) <-> APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kAspACdc, kDipACdc
+    AspEB55: ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + PPP2R2(ENSA_ARPP19) <-> ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) kAspEB55,kDipEB55
+    AsE2fProCe: @Nuc:E2F(DBD,RB1,Ser332~u) + @Nuc:CCNE_promoter(E2F) <-> @Nuc:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) kAsEPx, kDiEPx
+    AsE2fProCa: @Nuc:E2F(DBD,RB1,Ser332~u) + @Nuc:CCNA_promoter(E2F) <-> @Nuc:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) kAsEPx, kDiEPx
+    AsE2fProE2f: @Nuc:E2F(DBD,RB1,Ser332~u) + @Nuc:E2F_promoter(E2F) <-> @Nuc:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) kAsEPx, kDiEPx
+    AsE2fProEmi: @Nuc:E2F(DBD,RB1,Ser332~u) + @Nuc:FBXO5_promoter(E2F) <-> @Nuc:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) kAsEPx, kDiEPx
+    AsE2fProFox: @Nuc:E2F(DBD,RB1,Ser332~u) + @Nuc:FOXM1_promoter(E2F) <-> @Nuc:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) kAsEPx, kDiEPx
+    SySkp2: 0 -> @Cyt:SKP2() kSySkp2
+    DeSkp2_1: SKP2() -> 0 kDeSkp2_1 DeleteMolecules
+    DeSkp2_2: SKP2() + APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) -> APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) kDeSkp2_2 DeleteMolecules
+    AsTP53PCDKN1A: @Nuc:TP53(DBD,Ser15~p) + @Nuc:CDKN1A_promoter(TP53) <-> @Nuc:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) kAsTP53PCDKN1A, kDiTP53PCDKN1A
+    SyCDKN1A_1: 0 -> @Cyt:CDKN1A(CCNE_A_B,Ser130~u) kSyCDKN1A_1
+    SyCDKN1A_2: @Nuc:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) -> @Nuc:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) + @Cyt:CDKN1A(CCNE_A_B,Ser130~u) kSyCDKN1A_2
+    DeCDKN1A_1: CDKN1A() -> 0 kDeCDKN1A_1 DeleteMolecules
+    DeCDKN1A_2: CDKN1A(Ser130~p) + SKP2() -> SKP2() kDeCDKN1A_2 DeleteMolecules
+    DeCDKN1A_3: CDKN1A(Ser130~u) + SKP2() -> SKP2() kDeCDKN1A_2 DeleteMolecules  # There seems contraticting evidence as to whether Ser130 phosphorylation stabilizes of destabilizes CDKN1A.
+    AsCDKN1ACCNA: CDKN1A(CCNE_A_B,Ser130~u) + CCNA(CDKN1A_B) <-> CDKN1A(CCNE_A_B!1,Ser130~u).CCNA(CDKN1A_B!1) kAsCdkn1aC, kDiCdkn1aC
+    AsCDKN1ACCNE: CDKN1A(CCNE_A_B,Ser130~u) + CCNE(CDKN1A_B) <-> CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A_B!1) kAsCdkn1aC, kDiCdkn1aC
+    AsCDKN1ACCNB: CDKN1A(CCNE_A_B,Ser130~u) + CCNB(CDKN1A) <-> CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) kAsCdkn1aC, kDiCdkn1aC
+    PhCDKN1AByCe: CDKN1A(CCNE_A_B,Ser130~u) + CCNE(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A_B) kPhCDKN1AByCe
+    PhCdkn1aCaByCe: CDKN1A(CCNE_A_B!1,Ser130~u).CCNA(CDKN1A_B!1) + CCNE(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNA(CDKN1A_B) + CCNE(CDKN1A_B) kPhCDKN1AByCe
+    PhCdkn1aCeByCe: CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A_B!1) + CCNE(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A_B) + CCNE(CDKN1A_B) kPhCDKN1AByCe
+    PhCdkn1aCbByCe: CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) + CCNE(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A) + CCNE(CDKN1A_B) kPhCDKN1AByCe
+    PhCDKN1AByCa: CDKN1A(CCNE_A_B,Ser130~u) + CCNA(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNA(CDKN1A_B) kPhCDKN1AByCa  # There is no evidence that CCNA phosphorylates CDKN1A, but it would be surprising if it didn't have some CDKN1A phosphorylating activity, given that CCNE and CCNB have.
+    PhCdkn1aCaByCa: CDKN1A(CCNE_A_B!1,Ser130~u).CCNA(CDKN1A_B!1) + CCNA(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNA(CDKN1A_B) + CCNA(CDKN1A_B) kPhCDKN1AByCa
+    PhCdkn1aCeByCa: CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A_B!1) + CCNA(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A_B) + CCNA(CDKN1A_B) kPhCDKN1AByCa
+    PhCdkn1aCbByCa: CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) + CCNA(CDKN1A_B) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A) + CCNA(CDKN1A_B) kPhCDKN1AByCa
+    PhCDKN1AByCb: CDKN1A(CCNE_A_B,Ser130~u) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
+    PhCdkn1aCaByCb: CDKN1A(CCNE_A_B!1,Ser130~u).CCNA(CDKN1A_B!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNA(CDKN1A_B) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
+    PhCdkn1aCeByCb: CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A_B!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A_B) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
+    PhCdkn1aCbByCb: CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
+    DpCDKN1A: CDKN1A(Ser130~p) -> CDKN1A(Ser130~u) kDpCDKN1A
+    AsFOXOPCDKN1B: @Nuc:FOXO(DBD) + @Nuc:CDKN1B_promoter(FOXO) <-> @Nuc:FOXO(DBD!1).CDKN1B_promoter(FOXO!1)  kAsFOXOPCDKN1B,kDiFOXOPCDKN1B
+    SyCDKN1B_1: 0 -> @Cyt:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_1
+    SyCDKN1B_2: @Nuc:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) -> @Nuc:FOXO(DBD!1).CDKN1B_promoter(FOXO!1) + @Cyt:CDKN1B(CCNE_A,Thr187~u) kSyCDKN1B_2
+    DeCDKN1B_1: CDKN1B() -> 0 kDeCDKN1B_1 DeleteMolecules
+    DeCDKN1B_2: CDKN1B(Thr187~p) + SKP2() -> SKP2() kDeCDKN1B_2 DeleteMolecules
+    DeCDKN1B_3: CDKN1B(Thr187~u) + SKP2() -> SKP2() 0 DeleteMolecules  # There seems evidence that Thr187 phosphorylation is required for SKP2 mediated degradation.
+    AsCDKN1BCCNA: CDKN1B(CCNE_A) + CCNA(CDKN1A_B) <-> CDKN1B(CCNE_A!1).CCNA(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC # CDK mediated phosphorylation does not seem to reduce biding affinity.
+    AsCDKN1BCCNE: CDKN1B(CCNE_A) + CCNE(CDKN1A_B) <-> CDKN1B(CCNE_A!1).CCNE(CDKN1A_B!1) kAsCdkn1bC, kDiCdkn1bC  # CDKN1B cannot form a stable complex with CCNB/Cdk1
+    PhCDKN1BByCe: CDKN1B(Thr187~u) + CCNE(CDKN1A_B) -> CDKN1B(Thr187~p) + CCNE(CDKN1A_B) kPhCDKN1BByCe
+    PhCDKN1BByCa: CDKN1B(Thr187~u) + CCNA(CDKN1A_B) -> CDKN1B(Thr187~p) + CCNA(CDKN1A_B) kPhCDKN1BByCa
+    PhCDKN1BByCb: CDKN1B(Thr187~u) + CCNB(CDKN1A) -> CDKN1B(Thr187~p) + CCNB(CDKN1A) kPhCDKN1BByCb
+    DpCDKN1B: CDKN1B(Thr187~p) -> CDKN1B(Thr187~u) kDpCDKN1B
+    
+    # Transport rules
+	# PhNup: @Num:NUP(pSites~u) -> @Num:NUP(pSites~p) rPhNup()
+	# DpNup_1: @Num:NUP(pSites~p) -> @Num:NUP(pSites~u) kDpNup_1
+	ImCCND_1: @Cyt:CCND() + @Num:NUP(pSites~u) <-> @Nuc:CCND() + @Num:NUP(pSites~u) kImImCCND_1,kExImCCND_1
+	ImCCNE_CDKN1A_B__1: @Cyt:CCNE(CDKN1A_B) + @Num:NUP(pSites~u) <-> @Nuc:CCNE(CDKN1A_B) + @Num:NUP(pSites~u) kImImCCNE_CDKN1A_B__1,kExImCCNE_CDKN1A_B__1
+	ImE2F_DBD_RB1_Ser332u__1: @Cyt:E2F(DBD,RB1,Ser332~u) + @Num:NUP(pSites~u) <-> @Nuc:E2F(DBD,RB1,Ser332~u) + @Num:NUP(pSites~u) kImImE2F_DBD_RB1_Ser332u__1,kExImE2F_DBD_RB1_Ser332u__1
+	ImE2F_DBD_RB1_Ser332p__1: @Cyt:E2F(DBD,RB1,Ser332~p) + @Num:NUP(pSites~u) <-> @Nuc:E2F(DBD,RB1,Ser332~p) + @Num:NUP(pSites~u) kImImE2F_DBD_RB1_Ser332p__1,kExImE2F_DBD_RB1_Ser332p__1
+	ImCCNA_CDKN1A_B__1: @Cyt:CCNA(CDKN1A_B) + @Num:NUP(pSites~u) <-> @Nuc:CCNA(CDKN1A_B) + @Num:NUP(pSites~u) kImImCCNA_CDKN1A_B__1,kExImCCNA_CDKN1A_B__1
+	ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1: @Cyt:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) + @Num:NUP(pSites~u) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) + @Num:NUP(pSites~u) kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1,kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__1
+	ImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1: @Cyt:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~u) <-> @Nuc:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~u) kImImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1,kExImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__1
+	ImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1: @Cyt:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~u) <-> @Nuc:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~u) kImImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1,kExImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__1
+	ImRB1_E2F_Ser807_Ser811u__1: @Cyt:RB1(E2F,Ser807_Ser811~u) + @Num:NUP(pSites~u) <-> @Nuc:RB1(E2F,Ser807_Ser811~u) + @Num:NUP(pSites~u) kImImRB1_E2F_Ser807_Ser811u__1,kExImRB1_E2F_Ser807_Ser811u__1
+	ImRB1_E2F_Ser807_Ser811p__1: @Cyt:RB1(E2F,Ser807_Ser811~p) + @Num:NUP(pSites~u) <-> @Nuc:RB1(E2F,Ser807_Ser811~p) + @Num:NUP(pSites~u) kImImRB1_E2F_Ser807_Ser811p__1,kExImRB1_E2F_Ser807_Ser811p__1
+	ImPPP2R2_ENSA_ARPP19__1: @Cyt:PPP2R2(ENSA_ARPP19) + @Num:NUP(pSites~u) <-> @Nuc:PPP2R2(ENSA_ARPP19) + @Num:NUP(pSites~u) kImImPPP2R2_ENSA_ARPP19__1,kExImPPP2R2_ENSA_ARPP19__1
+	ImAPC_FBXO5_FZR1_CDC20_Ser355u__1: @Cyt:APC(FBXO5,FZR1_CDC20,Ser355~u) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5,FZR1_CDC20,Ser355~u) + @Num:NUP(pSites~u) kImImAPC_FBXO5_FZR1_CDC20_Ser355u__1,kExImAPC_FBXO5_FZR1_CDC20_Ser355u__1
+	ImCDC20_APC__1: @Cyt:CDC20(APC) + @Num:NUP(pSites~u) <-> @Nuc:CDC20(APC) + @Num:NUP(pSites~u) kImImCDC20_APC__1,kExImCDC20_APC__1
+	ImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) + @Num:NUP(pSites~u) kImImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1,kExImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__1
+	ImAPC_FBXO5_FZR1_CDC20_Ser355p__1: @Cyt:APC(FBXO5,FZR1_CDC20,Ser355~p) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5,FZR1_CDC20,Ser355~p) + @Num:NUP(pSites~u) kImImAPC_FBXO5_FZR1_CDC20_Ser355p__1,kExImAPC_FBXO5_FZR1_CDC20_Ser355p__1
+	ImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~u) kImImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1,kExImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__1
+	ImFZR1_APC_FBXO5_nTermu__1: @Cyt:FZR1(APC,FBXO5,nTerm~u) + @Num:NUP(pSites~u) <-> @Nuc:FZR1(APC,FBXO5,nTerm~u) + @Num:NUP(pSites~u) kImImFZR1_APC_FBXO5_nTermu__1,kExImFZR1_APC_FBXO5_nTermu__1
+	ImFZR1_APC_FBXO5_nTermp__1: @Cyt:FZR1(APC,FBXO5,nTerm~p) + @Num:NUP(pSites~u) <-> @Nuc:FZR1(APC,FBXO5,nTerm~p) + @Num:NUP(pSites~u) kImImFZR1_APC_FBXO5_nTermp__1,kExImFZR1_APC_FBXO5_nTermp__1
+	ImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1: @Cyt:APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~u) kImImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1,kExImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1
+	ImFBXO5_APC_FZR1_Ser182u__1: @Cyt:FBXO5(APC,FZR1,Ser182~u) + @Num:NUP(pSites~u) <-> @Nuc:FBXO5(APC,FZR1,Ser182~u) + @Num:NUP(pSites~u) kImImFBXO5_APC_FZR1_Ser182u__1,kExImFBXO5_APC_FZR1_Ser182u__1
+	ImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1: @Cyt:APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~u) kImImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1,kExImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__1
+	ImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~u) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~u) kImImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1,kExImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__1
+	ImFBXO5_APC_FZR1_Ser182p__1: @Cyt:FBXO5(APC,FZR1,Ser182~p) + @Num:NUP(pSites~u) <-> @Nuc:FBXO5(APC,FZR1,Ser182~p) + @Num:NUP(pSites~u) kImImFBXO5_APC_FZR1_Ser182p__1,kExImFBXO5_APC_FZR1_Ser182p__1
+	ImFOXM1_DBD_Thr600u__1: @Cyt:FOXM1(DBD,Thr600~u) + @Num:NUP(pSites~u) <-> @Nuc:FOXM1(DBD,Thr600~u) + @Num:NUP(pSites~u) kImImFOXM1_DBD_Thr600u__1,kExImFOXM1_DBD_Thr600u__1
+	ImFOXM1_DBD_Thr600p__1: @Cyt:FOXM1(DBD,Thr600~p) + @Num:NUP(pSites~u) <-> @Nuc:FOXM1(DBD,Thr600~p) + @Num:NUP(pSites~u) kImImFOXM1_DBD_Thr600p__1,kExImFOXM1_DBD_Thr600p__1
+	ImWEE1_Ser123u__1: @Cyt:WEE1(Ser123~u) + @Num:NUP(pSites~u) <-> @Nuc:WEE1(Ser123~u) + @Num:NUP(pSites~u) kImImWEE1_Ser123u__1,kExImWEE1_Ser123u__1
+	ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1: @Cyt:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) + @Num:NUP(pSites~u) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) + @Num:NUP(pSites~u) kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1,kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__1
+	ImWEE1_Ser123p__1: @Cyt:WEE1(Ser123~p) + @Num:NUP(pSites~u) <-> @Nuc:WEE1(Ser123~p) + @Num:NUP(pSites~u) kImImWEE1_Ser123p__1,kExImWEE1_Ser123p__1
+	ImCDC25_pSitesp__1: @Cyt:CDC25(pSites~p) + @Num:NUP(pSites~u) <-> @Nuc:CDC25(pSites~p) + @Num:NUP(pSites~u) kImImCDC25_pSitesp__1,kExImCDC25_pSitesp__1
+	ImCDC25_pSitesu__1: @Cyt:CDC25(pSites~u) + @Num:NUP(pSites~u) <-> @Nuc:CDC25(pSites~u) + @Num:NUP(pSites~u) kImImCDC25_pSitesu__1,kExImCDC25_pSitesu__1
+	ImMASTL_Thr198u__1: @Cyt:MASTL(Thr198~u) + @Num:NUP(pSites~u) <-> @Nuc:MASTL(Thr198~u) + @Num:NUP(pSites~u) kImImMASTL_Thr198u__1,kExImMASTL_Thr198u__1
+	ImMASTL_Thr198p__1: @Cyt:MASTL(Thr198~p) + @Num:NUP(pSites~u) <-> @Nuc:MASTL(Thr198~p) + @Num:NUP(pSites~u) kImImMASTL_Thr198p__1,kExImMASTL_Thr198p__1
+	ImENSA_ARPP19_PPP2R2_Ser62_Ser67u__1: @Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) + @Num:NUP(pSites~u) <-> @Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) + @Num:NUP(pSites~u) kImImENSA_ARPP19_PPP2R2_Ser62_Ser67u__1,kExImENSA_ARPP19_PPP2R2_Ser62_Ser67u__1
+	ImENSA_ARPP19_PPP2R2_Ser62_Ser67p__1: @Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + @Num:NUP(pSites~u) <-> @Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + @Num:NUP(pSites~u) kImImENSA_ARPP19_PPP2R2_Ser62_Ser67p__1,kExImENSA_ARPP19_PPP2R2_Ser62_Ser67p__1
+	ImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__1: @Cyt:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) + @Num:NUP(pSites~u) <-> @Nuc:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) + @Num:NUP(pSites~u) kImImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__1,kExImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__1
+	ImSKP2_1: @Cyt:SKP2() + @Num:NUP(pSites~u) <-> @Nuc:SKP2() + @Num:NUP(pSites~u) kImImSKP2_1,kExImSKP2_1
+	ImTP53_DBD_Ser15p__1: @Cyt:TP53(DBD,Ser15~p) + @Num:NUP(pSites~u) <-> @Nuc:TP53(DBD,Ser15~p) + @Num:NUP(pSites~u) kImImTP53_DBD_Ser15p__1,kExImTP53_DBD_Ser15p__1
+	ImFOXO_DBD__1: @Cyt:FOXO(DBD) + @Num:NUP(pSites~u) <-> @Nuc:FOXO(DBD) + @Num:NUP(pSites~u) kImImFOXO_DBD__1,kExImFOXO_DBD__1
+	ImCDKN1A_CCNE_A_B_Ser130u__1: @Cyt:CDKN1A(CCNE_A_B,Ser130~u) + @Num:NUP(pSites~u) <-> @Nuc:CDKN1A(CCNE_A_B,Ser130~u) + @Num:NUP(pSites~u) kImImCDKN1A_CCNE_A_B_Ser130u__1,kExImCDKN1A_CCNE_A_B_Ser130u__1
+	ImCDKN1B_CCNE_A_Thr187u__1: @Cyt:CDKN1B(CCNE_A,Thr187~u) + @Num:NUP(pSites~u) <-> @Nuc:CDKN1B(CCNE_A,Thr187~u) + @Num:NUP(pSites~u) kImImCDKN1B_CCNE_A_Thr187u__1,kExImCDKN1B_CCNE_A_Thr187u__1
+	ImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1: @Cyt:CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) kImImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1,kExImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1
+	ImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1: @Cyt:CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) kImImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1,kExImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__1
+	ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1: @Cyt:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) kImImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1,kExImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1
+	ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1: @Cyt:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~u) kImImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1,kExImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__1
+	ImCDKN1A_CCNE_A_B_Ser130p__1: @Cyt:CDKN1A(CCNE_A_B,Ser130~p) + @Num:NUP(pSites~u) <-> @Nuc:CDKN1A(CCNE_A_B,Ser130~p) + @Num:NUP(pSites~u) kImImCDKN1A_CCNE_A_B_Ser130p__1,kExImCDKN1A_CCNE_A_B_Ser130p__1
+	ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1: @Cyt:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~u) kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1,kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1
+	ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1: @Cyt:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~u) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~u) kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1,kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__1
+	ImCDKN1B_CCNE_A_Thr187p__1: @Cyt:CDKN1B(CCNE_A,Thr187~p) + @Num:NUP(pSites~u) <-> @Nuc:CDKN1B(CCNE_A,Thr187~p) + @Num:NUP(pSites~u) kImImCDKN1B_CCNE_A_Thr187p__1,kExImCDKN1B_CCNE_A_Thr187p__1
+	ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1: @Cyt:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~u) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~u) kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1,kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1
+	ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1: @Cyt:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~u) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~u) kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1,kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1
+	
+	ImCCND_2: @Cyt:CCND() + @Num:NUP(pSites~p) <-> @Nuc:CCND() + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNE_CDKN1A_B__2: @Cyt:CCNE(CDKN1A_B) + @Num:NUP(pSites~p) <-> @Nuc:CCNE(CDKN1A_B) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImE2F_DBD_RB1_Ser332u__2: @Cyt:E2F(DBD,RB1,Ser332~u) + @Num:NUP(pSites~p) <-> @Nuc:E2F(DBD,RB1,Ser332~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImE2F_DBD_RB1_Ser332p__2: @Cyt:E2F(DBD,RB1,Ser332~p) + @Num:NUP(pSites~p) <-> @Nuc:E2F(DBD,RB1,Ser332~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNA_CDKN1A_B__2: @Cyt:CCNA(CDKN1A_B) + @Num:NUP(pSites~p) <-> @Nuc:CCNA(CDKN1A_B) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A__2: @Cyt:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) + @Num:NUP(pSites~p) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImE2F_DBD_RB11_Ser332u__RB1_E2F1_Ser807_Ser811u__2: @Cyt:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~p) <-> @Nuc:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImE2F_DBD_RB11_Ser332p__RB1_E2F1_Ser807_Ser811u__2: @Cyt:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~p) <-> @Nuc:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImRB1_E2F_Ser807_Ser811u__2: @Cyt:RB1(E2F,Ser807_Ser811~u) + @Num:NUP(pSites~p) <-> @Nuc:RB1(E2F,Ser807_Ser811~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImRB1_E2F_Ser807_Ser811p__2: @Cyt:RB1(E2F,Ser807_Ser811~p) + @Num:NUP(pSites~p) <-> @Nuc:RB1(E2F,Ser807_Ser811~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImPPP2R2_ENSA_ARPP19__2: @Cyt:PPP2R2(ENSA_ARPP19) + @Num:NUP(pSites~p) <-> @Nuc:PPP2R2(ENSA_ARPP19) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO5_FZR1_CDC20_Ser355u__2: @Cyt:APC(FBXO5,FZR1_CDC20,Ser355~u) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5,FZR1_CDC20,Ser355~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDC20_APC__2: @Cyt:CDC20(APC) + @Num:NUP(pSites~p) <-> @Nuc:CDC20(APC) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO5_FZR1_CDC201_Ser355p__CDC20_APC1__2: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO5_FZR1_CDC20_Ser355p__2: @Cyt:APC(FBXO5,FZR1_CDC20,Ser355~p) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5,FZR1_CDC20,Ser355~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO5_FZR1_CDC201_Ser355u__FZR1_APC1_FBXO5_nTermu__2: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFZR1_APC_FBXO5_nTermu__2: @Cyt:FZR1(APC,FBXO5,nTerm~u) + @Num:NUP(pSites~p) <-> @Nuc:FZR1(APC,FBXO5,nTerm~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFZR1_APC_FBXO5_nTermp__2: @Cyt:FZR1(APC,FBXO5,nTerm~p) + @Num:NUP(pSites~p) <-> @Nuc:FZR1(APC,FBXO5,nTerm~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO51_FZR1_CDC202_Ser355u__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__2: @Cyt:APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFBXO5_APC_FZR1_Ser182u__2: @Cyt:FBXO5(APC,FZR1,Ser182~u) + @Num:NUP(pSites~p) <-> @Nuc:FBXO5(APC,FZR1,Ser182~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO51_FZR1_CDC202_Ser355p__FBXO5_APC1_FZR13_Ser182u__FZR1_APC2_FBXO53_nTermu__2: @Cyt:APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImAPC_FBXO5_FZR1_CDC201_Ser355p__FZR1_APC1_FBXO5_nTermu__2: @Cyt:APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~p) <-> @Nuc:APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFBXO5_APC_FZR1_Ser182p__2: @Cyt:FBXO5(APC,FZR1,Ser182~p) + @Num:NUP(pSites~p) <-> @Nuc:FBXO5(APC,FZR1,Ser182~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFOXM1_DBD_Thr600u__2: @Cyt:FOXM1(DBD,Thr600~u) + @Num:NUP(pSites~p) <-> @Nuc:FOXM1(DBD,Thr600~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFOXM1_DBD_Thr600p__2: @Cyt:FOXM1(DBD,Thr600~p) + @Num:NUP(pSites~p) <-> @Nuc:FOXM1(DBD,Thr600~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImWEE1_Ser123u__2: @Cyt:WEE1(Ser123~u) + @Num:NUP(pSites~p) <-> @Nuc:WEE1(Ser123~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A__2: @Cyt:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) + @Num:NUP(pSites~p) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImWEE1_Ser123p__2: @Cyt:WEE1(Ser123~p) + @Num:NUP(pSites~p) <-> @Nuc:WEE1(Ser123~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDC25_pSitesp__2: @Cyt:CDC25(pSites~p) + @Num:NUP(pSites~p) <-> @Nuc:CDC25(pSites~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDC25_pSitesu__2: @Cyt:CDC25(pSites~u) + @Num:NUP(pSites~p) <-> @Nuc:CDC25(pSites~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImMASTL_Thr198u__2: @Cyt:MASTL(Thr198~u) + @Num:NUP(pSites~p) <-> @Nuc:MASTL(Thr198~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImMASTL_Thr198p__2: @Cyt:MASTL(Thr198~p) + @Num:NUP(pSites~p) <-> @Nuc:MASTL(Thr198~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImENSA_ARPP19_PPP2R2_Ser62_Ser67u__2: @Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) + @Num:NUP(pSites~p) <-> @Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImENSA_ARPP19_PPP2R2_Ser62_Ser67p__2: @Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + @Num:NUP(pSites~p) <-> @Nuc:ENSA_ARPP19(PPP2R2,Ser62_Ser67~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImENSA_ARPP19_PPP2R21_Ser62_Ser67p__PPP2R2_ENSA_ARPP191__2: @Cyt:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) + @Num:NUP(pSites~p) <-> @Nuc:ENSA_ARPP19(PPP2R2!1,Ser62_Ser67~p).PPP2R2(ENSA_ARPP19!1) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImSKP2_2: @Cyt:SKP2() + @Num:NUP(pSites~p) <-> @Nuc:SKP2() + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImTP53_DBD_Ser15p__2: @Cyt:TP53(DBD,Ser15~p) + @Num:NUP(pSites~p) <-> @Nuc:TP53(DBD,Ser15~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImFOXO_DBD__2: @Cyt:FOXO(DBD) + @Num:NUP(pSites~p) <-> @Nuc:FOXO(DBD) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDKN1A_CCNE_A_B_Ser130u__2: @Cyt:CDKN1A(CCNE_A_B,Ser130~u) + @Num:NUP(pSites~p) <-> @Nuc:CDKN1A(CCNE_A_B,Ser130~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDKN1B_CCNE_A_Thr187u__2: @Cyt:CDKN1B(CCNE_A,Thr187~u) + @Num:NUP(pSites~p) <-> @Nuc:CDKN1B(CCNE_A,Thr187~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNA_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__2: @Cyt:CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNE_CDKN1A_B1__CDKN1A_CCNE_A_B1_Ser130u__2: @Cyt:CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNB_CDK1_Thr14_Tyr15u_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__2: @Cyt:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~u,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNB_CDK1_Thr14_Tyr15p_CDKN1A1__CDKN1A_CCNE_A_B1_Ser130u__2: @Cyt:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNB(CDK1_Thr14_Tyr15~p,CDKN1A!1).CDKN1A(CCNE_A_B!1,Ser130~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDKN1A_CCNE_A_B_Ser130p__2: @Cyt:CDKN1A(CCNE_A_B,Ser130~p) + @Num:NUP(pSites~p) <-> @Nuc:CDKN1A(CCNE_A_B,Ser130~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__2: @Cyt:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187u__2: @Cyt:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~p) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~u) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCDKN1B_CCNE_A_Thr187p__2: @Cyt:CDKN1B(CCNE_A,Thr187~p) + @Num:NUP(pSites~p) <-> @Nuc:CDKN1B(CCNE_A,Thr187~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__2: @Cyt:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~p) <-> @Nuc:CCNA(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+	ImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__2: @Cyt:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~p) <-> @Nuc:CCNE(CDKN1A_B!1).CDKN1B(CCNE_A!1,Thr187~p) + @Num:NUP(pSites~p) kIm_2,kEx_2
+
+#	# Synthesis of constant species
+#	SyCCND: 0 -> @Cyt:CCND() kSyCCND
+#	DeCCND: CCND() -> 0 kDeCCND DeleteMolecules
+#	SyFZR1: 0 -> @Cyt:FZR1(APC,FBXO5,nTerm~u) kSyFZR1
+#	DeFZR1: FZR1() -> 0 kDeFZR1 DeleteMolecules
+#	SyTP53: 0 -> @Cyt:TP53(DBD,Ser15~p) kSyTP53  # For now I assume that TP53 is immediately phosphorylated after synthesis
+#	DeTP53: TP53() -> 0 kDeTP53 DeleteMolecules
+#	SyCDC25: 0 -> @Cyt:CDC25(pSites~u) kSyCDC25
+#	DeCDC25: CDC25() -> 0 kDeCDC25 DeleteMolecules
+#	SyWEE1: 0 -> @Cyt:WEE1(Ser123~u) kSyWEE1
+#	DeWEE1: WEE1() -> 0 kDeWEE1 DeleteMolecules
+#	SyPPP2R2: 0 -> @Cyt:PPP2R2(ENSA_ARPP19) kSyPPP2R2
+#	DePPP2R2: PPP2R2() -> 0 kDePPP2R2 DeleteMolecules
+#	SyMASTL: 0 -> @Cyt:MASTL(Thr198~u) kSyMASTL
+#	DeMASTL: MASTL() -> 0 kDeMASTL DeleteMolecules
+#	SyENSA_ARPP19: 0 -> @Cyt:ENSA_ARPP19(PPP2R2,Ser62_Ser67~u) kSyENSA_ARPP19
+#	DeENSA_ARPP19: ENSA_ARPP19() -> 0 kDeENSA_ARPP19 DeleteMolecules
+end reaction rules
+
+end model
+
+# Simulation
+generate_network({overwrite=>1})
+writeSBML()
+
+# Basic simulation (deterministic)
+simulate({method=>"ode",t_end=>2.2e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+
+# Simulating DNA damage (deterministic)
+#simulate({method=>"ode",t_end=>0.73e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+#saveConcentrations();
+#setConcentration("@Cyt:TP53(DBD,Ser15~p)","2*6.022e11");
+#simulate({method=>"ode",continue=>1,t_start=>0.73e5,t_end=>1.5e5,n_steps=>1e3});
+#saveConcentrations();
+#setConcentration("@Cyt:TP53(DBD,Ser15~p)","0*6.022e11");
+#setConcentration("@Nuc:TP53(DBD,Ser15~p)","0*6.022e11");
+#simulate({method=>"ode",continue=>1,t_start=>1.5e5,t_end=>3e5,n_steps=>1e3});
+#saveConcentrations();
+#setConcentration("@Cyt:TP53(DBD,Ser15~p)","2*6.022e11");
+#simulate({method=>"ode",continue=>1,t_start=>3e5,t_end=>3.4e5,n_steps=>1e3});
+#saveConcentrations();
+#setConcentration("@Cyt:TP53(DBD,Ser15~p)","0*6.022e11");
+#setConcentration("@Nuc:TP53(DBD,Ser15~p)","0*6.022e11");
+#simulate({method=>"ode",continue=>1,t_start=>3.4e5,t_end=>3.9e5,n_steps=>1e3});
+
+# Basic simulation (stochastic)
+#simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
