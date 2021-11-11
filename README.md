@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/github/license/paulflang/cell_cycle_petab.svg)](https://github.com/paulflang/cell_cycle_petab/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/paulflang/cell_cycle_petab)](./LICENSE)
 
 # `cell_cycle_petab`
 
