@@ -113,7 +113,7 @@ ic_wt_cell__FOXM1_DBD_Thr600p_		lin	3.81E-05	3.81E-03	0.000381116	1	0
 ic_wt_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_		lin	1.90E-08	1.90E-06	1.90E-07	1	0
 ic_wt_cell__CCNB_promoter_FOXM1_		lin	9.98E-06	9.98E-04	9.98E-05	1	0
 ic_wt_cell__CDC20_promoter_FOXM1_		lin	9.99E-06	9.99E-04	9.99E-05	1	0
-ic_wt_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_		lin	7.62E-09	7.62E-07	7.62E-08	1	0
+ic_wt_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_		lin	0.00E+00	7.62E-07	7.62E-08	1	0
 ic_wt_cell__WEE1_Ser123u_		lin	9.80E-02	9.80E+00	0.98044163	1	0
 ic_wt_cell__CCNB_CDK1_Thr14_Tyr15p_		lin	7.51E-04	7.51E-02	0.007512915	1	0
 ic_wt_cell__WEE1_Ser123p_		lin	1.96E-03	1.96E-01	0.019558367	1	0
