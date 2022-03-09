@@ -25,4 +25,4 @@ problems:
   observable_files:
   - observables_v3.0.0.tsv
   sbml_files:
-  - cell_cycle_v3.0.0_rescaled_sbml.xml
+  - cell_cycle_v3.0.0_sbml.xml
