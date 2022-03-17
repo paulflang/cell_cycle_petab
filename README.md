@@ -1,5 +1,3 @@
-[![License](https://img.shields.io/github/license/paulflang/cell_cycle_petab)](./LICENSE)
-
 # `cell_cycle_petab`
 
 `cell_cycle_petab` is a repository that stores several cell cycle model versions and their corresponding PEtab problems.
