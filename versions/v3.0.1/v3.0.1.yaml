@@ -1,0 +1,28 @@
+# PEtab problem with three datasets
+#   * real experimental data from Stallaert_CellSystems2021
+#   * simulated mock data for Stallaert_CellSystems2021 with N(0, 0.1^2) noise
+#   * simulated mock data for Stallaert_CellSystems2021 with no noise
+#
+# Parameters contained
+#   * kinetic parameters
+#   * initial concentration parameters
+#   * observation function parameters
+#   * noise parameters
+#
+# Note that:
+#   * the problem is structurally unidentifyable, e.g.: initial_concentration_of_X * k_cat = const
+#   * the model contains mass conservations
+#   * not all parameters are set to `estimate`, which would introduce further unidentifiabilities
+#   * we may be able to obtain prior estimates of observation function parameters
+
+format_version: 1
+parameter_file: parameters_v3.0.1.tsv
+problems:
+- condition_files:
+  - experimentalCondition_v3.0.1.tsv
+  measurement_files:
+  - Stallaert_CellSystems2021_Data_2rounds.tsv  # simulatedData_v3.0.0_0noise.tsv  # simulatedData_v3.0.0_0.1noise.tsv  # Stallaert_CellSystems2021_Data.tsv  # Stallaert_CellSystems2021_Data_2rounds.tsv
+  observable_files:
+  - observables_v3.0.1.tsv
+  sbml_files:
+  - cell_cycle_v3.0.1_petab.xml

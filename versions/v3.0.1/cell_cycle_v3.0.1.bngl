@@ -121,7 +121,7 @@ begin molecule types
 	CDC20(APC)
 	CDC25(pSites~u~p)
 	CCNB(CDK1_Thr14_Tyr15~u~p)
-	APC(FZR1_CDC20,FBXO5,Ser355~u~p)
+	APC(FBXO5,FZR1_CDC20,Ser355~u~p)
 end molecule types
 begin seed species
 	@cell:CCND() (1.0*1)  #Cd
@@ -135,24 +135,24 @@ begin seed species
 	@cell:RB1(E2F,Ser807_Ser811~u) (0.0876426874*1)  #Rb
 	@cell:RB1(E2F,Ser807_Ser811~p) (0.840745442*1)  #pRb
 	@cell:PPP2R2B(ENSA_ARPP19) (0.0771916254*1)  #B55
-	@cell:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*1)  #Apc
+	@cell:APC(FBXO5,FZR1_CDC20,Ser355~u) (4.02871328*1)  #Apc
 	@cell:CDC20(APC) (0.229952789*1)  #Cdc20
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*1)  #Apc # This was added manually when checking for model correctness
-	@cell:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*1)  #pApc
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*1)  #ApcCdh
+	@cell:APC(FBXO5,FZR1_CDC20!1,Ser355~p).CDC20(APC!1) (0.0698900785*1)  #Apc # This was added manually when checking for model correctness
+	@cell:APC(FBXO5,FZR1_CDC20,Ser355~p) (0.0630910652*1)  #pApc
+	@cell:APC(FBXO5,FZR1_CDC20!1,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*1)  #ApcCdh
 	@cell:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*1)  #Cdh
 	@cell:FZR1(APC,FBXO5,nTerm~p) (0.16112308*1)  #pCdh
-	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*1)  #ACE
+	@cell:APC(FBXO5!1,FZR1_CDC20!2,Ser355~u).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) (0.108941313*1)  #ACE
 	@cell:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*1)  #Emi
-	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*1)  #pACE
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*1)  #pApcCdh
+	@cell:APC(FBXO5!1,FZR1_CDC20!2,Ser355~p).FBXO5(APC!1,FZR1!3,Ser182~u).FZR1(APC!2,FBXO5!3,nTerm~u) (0.00221254711*1)  #pACE
+	@cell:APC(FBXO5,FZR1_CDC20!1,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*1)  #pApcCdh
 	@cell:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*1)  #pEmi
 	@cell:FOXM1(DBD,Thr600~u) (0.0055647336*1)  #Fox
 	@cell:FOXM1(DBD,Thr600~p) (0.00038111617*1)  #pFox
-	@cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) (1.90325916e-07*1)  #pFoxProCb
+	@cell:CCNB_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) (1.90325916e-07*1)  #pFoxProCb
 	@cell:CCNB_promoter(FOXM1) (9.98096741e-05*1)  #ProCb
 	@cell:CDC20_promoter(FOXM1) (9.99238147e-05*1)  #ProCdc
-	@cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) (7.61853468e-08*1)  #pFoxProCdc
+	@cell:CDC20_promoter(FOXM1!1).FOXM1(DBD!1,Thr600~p) (7.61853468e-08*1)  #pFoxProCdc
 	@cell:WEE1(Ser123~u) (0.980441633*1)  #Wee
 	@cell:CCNB(CDK1_Thr14_Tyr15~p) (0.00751291485*1)  #pCb
 	@cell:WEE1(Ser123~p) (0.019558367*1)  #pWee
@@ -168,13 +168,13 @@ begin seed species
 	@cell:E2F_promoter(E2F) (8.44790241e-05*1)  #ProE2f
 	@cell:FBXO5_promoter(E2F) (8.44790241e-05*1)  #ProEmi
 	@cell:FOXM1_promoter(E2F) (8.44790241e-05*1)  #ProFox
-	@cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) (1.55209759e-05*1)  #E2fProCe
-	@cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) (1.55209759e-05*1)  #E2fProCa
+	@cell:CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) (1.55209759e-05*1)  #E2fProCe
+	@cell:CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~u) (1.55209759e-05*1)  #E2fProCa
 	@cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) (1.55209759e-05*1)  #E2fProE2f
 	@cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) (1.55209759e-05*1)  #E2fProEmi
 	@cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*1)  #E2fProFox
-	@cell:E2F(DBD!1,RB1,Ser332~p).CCNE_promoter(E2F!1) (0*1)  #E2fProCe
-	@cell:E2F(DBD!1,RB1,Ser332~p).CCNA_promoter(E2F!1) (0*1)  #E2fProCa
+	@cell:CCNE_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) (0*1)  #E2fProCe
+	@cell:CCNA_promoter(E2F!1).E2F(DBD!1,RB1,Ser332~p) (0*1)  #E2fProCa
 	@cell:E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) (0*1)  #E2fProE2f
 	@cell:E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) (0*1)  #E2fProEmi
 	@cell:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1)  #E2fProFox
