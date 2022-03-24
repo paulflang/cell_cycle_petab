@@ -10,7 +10,7 @@ sbml_path = os.path.join(file_dir, '..', 'cell_cycle_' + version + '_petab.xml')
 bngl_path = os.path.join(file_dir, 'cell_cycle_' + version + '.bngl')
 parameter_path = os.path.join(file_dir, 'parameters_' + version + '.tsv')
 
-bngl_out = os.path.join(file_dir, 'cell_cycle_' + version + '_test.bngl')
+bngl_out = os.path.join(file_dir, 'cell_cycle_' + version + '_test1.bngl')
 #############################################################
 
 par_df = pd.read_csv(parameter_path, sep='\t')
