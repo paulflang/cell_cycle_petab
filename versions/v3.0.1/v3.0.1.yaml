@@ -26,3 +26,5 @@ problems:
   - observables_v3.0.1.tsv
   sbml_files:
   - cell_cycle_v3.0.1_petab.xml
+  visualization_files:
+  - visualizationSpecification_cell_cycle_v3.0.1.tsv
