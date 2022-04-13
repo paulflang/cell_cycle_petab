@@ -1,0 +1,183 @@
+parameterId	parameterName	parameterScale	lowerBound	upperBound	nominalValue	estimate	hierarchicalOptimization	objectivePriorType	objectivePriorParameters																
+kPhRbD		log	0.000554401	0.055440055	0.000564345	1	0	uniform																	
+kPhRbE		log	0.000693001	0.069300069	0.069186339	1	0	uniform																	
+kDpRb		log	0.0001386	0.013860014	0.013822244	1	0	uniform																	
+kPhRb		log	0.002079002	0.20790021	0.015477617	1	0	uniform																	
+kSyCe1		log	1.39E-06	0.0001386	3.74E-05	1	0	uniform																	
+kSyCe2		log	0.41580042	41.580042	0.751092246	1	0	uniform																	
+kDeCe		log	1.39E-05	0.001386001	0.001324468	1	0	uniform																	
+kDiE2fRb		log	3.47E-05	0.003465004	5.78E-05	1	0	uniform																	
+kAsE2fRb		log	0.034650035	3.4650035	0.104239143	1	0	uniform																	
+kSyE2f1		log	6.93E-07	6.93E-05	1.25E-06	1	0	uniform																	
+kSyE2f2		log	0.069300069	6.9300069	0.21683728	1	0	uniform																	
+kDeE2f1		log	6.93E-06	0.000693001	7.04E-06	1	0	uniform																	
+kDeE2f2		log	0.0001386	0.013860014	0.000674395	1	0	uniform																	
+kPhE2f		log	0.0001386	0.013860014	0.013859644	1	0	uniform																	
+kDpE2f2		log	0.006930007	0.69300069	0.046603268	1	0	uniform																	
+kSyEmi1		log	3.47E-06	0.0003465	5.95E-05	1	0	uniform																	
+kSyEmi2		log	0.34650035	34.650035	1.20149758	1	0	uniform																	
+kDeEmi1		log	3.47E-05	0.003465004	0.00020818	1	0	uniform																	
+kDeEmi2		log	3.47E-05	0.003465004	0.000307484	1	0	uniform																	
+kDeEmi3		log	0.0003465	0.034650035	0.034468118	1	0	uniform																	
+kPhEmiA		log	3.47E-06	0.0003465	0.000344244	1	0	uniform																	
+kPhEmiB		log	1.73E-05	0.001732502	1.83E-05	1	0	uniform																	
+kDpEmi		log	3.47E-07	3.47E-05	3.81E-06	1	0	uniform																	
+kSyCa1		log	6.93E-07	6.93E-05	1.09E-05	1	0	uniform																	
+kSyCa2		log	0.051975052	5.1975052	2.945116475	1	0	uniform																	
+kDeCa1		log	6.93E-07	6.93E-05	6.93E-07	1	0	uniform																	
+kDeCa2		log	0.0002772	0.027720028	0.025255142	1	0	uniform																	
+kDeCa3		log	6.93E-05	0.006930007	0.002365658	1	0	uniform																	
+kDpCdh		log	0.0003465	0.034650035	0.000357605	1	0	uniform																	
+kPhCdhA		log	0.001732502	0.17325017	0.0017325	1	0	uniform																	
+kPhCdhE		log	6.93E-05	0.006930007	6.93E-05	1	0	uniform																	
+kPhCdhB		log	0.017325017	1.7325017	0.123457895	1	0	uniform																	
+kDiACE		log	3.47E-05	0.003465004	0.003142158	1	0	uniform																	
+kAsACE		log	0.034650035	3.4650035	0.079019697	1	0	uniform																	
+kDiACdh		log	3.47E-05	0.003465004	0.000152027	1	0	uniform																	
+kAsACdh		log	0.034650035	3.4650035	0.034937556	1	0	uniform																	
+kPhCeA		log	0.000693001	0.069300069	0.000694122	1	0	uniform																	
+kPhCeE		log	6.93E-06	0.000693001	0.000693	1	0	uniform																	
+kPhFoxE		log	6.93E-05	0.006930007	7.17E-05	1	0	uniform																	
+kPhFoxA		log	6.93E-05	0.006930007	7.78E-05	1	0	uniform																	
+kPhFoxB		log	0.0003465	0.034650035	0.014070121	1	0	uniform																	
+kDpFox		log	3.47E-06	0.0003465	3.53E-06	1	0	uniform																	
+kSyCb1		log	6.93E-07	6.93E-05	6.99E-06	1	0	uniform																	
+kSyCb2		log	0.051975052	5.1975052	2.85302545	1	0	uniform																	
+kDeCb1		log	6.93E-07	6.93E-05	2.81E-05	1	0	uniform																	
+kDeCb2		log	8.66E-05	0.008662509	0.00010361	1	0	uniform																	
+kDeCb3		log	8.66E-05	0.008662509	0.000503681	1	0	uniform																	
+kPhEnsa		log	6.93E-05	0.006930007	0.000138203	1	0	uniform																	
+kDpEnsa		log	3.47E-05	0.003465004	0.000151067	1	0	uniform																	
+kPhGw		log	0.000693001	0.069300069	0.009365626	1	0	uniform																	
+kDpGw1		log	0.00017325	0.017325017	0.009812211	1	0	uniform																	
+kDpGw2		log	0.006930007	0.69300069	0.041263487	1	0	uniform																	
+kWee1		log	6.93E-06	0.000693001	6.94E-06	1	0	uniform																	
+kWee2		log	0.000693001	0.069300069	0.001658203	1	0	uniform																	
+kPhWeeA		log	6.93E-05	0.006930007	0.000472238	1	0	uniform																	
+kPhWeeB		log	0.000693001	0.069300069	0.069268443	1	0	uniform																	
+kDpWee		log	0.006930007	0.69300069	0.024151376	1	0	uniform																	
+kCdc25_1		log	6.93E-05	0.006930007	0.003724155	1	0	uniform																	
+kCdc25_2		log	0.000693001	0.069300069	0.009045757	1	0	uniform																	
+kDpCdc25		log	0.006930007	0.69300069	0.009547634	1	0	uniform																	
+kDipEB55		log	4.71E-06	0.00047124	1.72E-05	1	0	uniform																	
+kAspEB55		log	0.03950104	3.950104	0.090141271	1	0	uniform																	
+kSyCdc_1		log	6.93E-07	6.93E-05	6.93E-07	1	0	uniform																	
+kSyCdc_2		log	0.069300069	6.9300069	6.921916686	1	0	uniform																	
+kDeCdc_1		log	2.77E-06	0.0002772	0.000189066	1	0	uniform																	
+kDeCdc_2		log	2.77E-05	0.002772003	0.002771989	1	0	uniform																	
+kDipACdc		log	8.66E-05	0.008662509	0.000185751	1	0	uniform																	
+kAspACdc		log	0.000693001	0.069300069	0.000698069	1	0	uniform																	
+kPhApcA		log	6.93E-06	0.000693001	8.87E-05	1	0	uniform																	
+kDpApc_1		log	0	0.03	0	1	0	uniform																	
+kDpApc_2		log	0.003465004	0.34650035	0.129723889	1	0	uniform																	
+kSyFox1		log	6.93E-07	6.93E-05	4.29E-05	1	0	uniform																	
+kSyFox2		log	0.051975052	5.1975052	0.216048085	1	0	uniform																	
+kDeFox1		log	6.93E-07	6.93E-05	9.06E-07	1	0	uniform																	
+kDeFox2		log	0.0003465	0.034650035	0.031783526	1	0	uniform																	
+kAsEPx		log	0.034650035	3.4650035	0.746642968	1	0	uniform																	
+kDiEPx		log	0.003465004	0.34650035	0.003712774	1	0	uniform																	
+kAsFPcb		log	0.034650035	3.4650035	0.059669061	1	0	uniform																	
+kDiFPcb		log	0.006930007	0.69300069	0.04547492	1	0	uniform																	
+kAsFPcdc		log	0.034650035	3.4650035	1.920917255	1	0	uniform																	
+kDiFPcdc		log	0.017325017	1.7325017	0.101991176	1	0	uniform																	
+kPhC25B		log	0.000693001	0.069300069	0.018130039	1	0	uniform																	
+kPhCAEE		log	5.54E-05	0.005544006	0.003281609	1	0	uniform																	
+kPhCAEA		log	0.001386001	0.13860014	0.016746587	1	0	uniform																	
+kPhCAEB		log	0.013860014	1.3860014	0.057087542	1	0	uniform																	
+kDpE2f1		log	0	0.01	0	1	0	uniform																	
+kPhC25A		log	0	0.01	0	1	0	uniform																	
+kSySkp2		log	0.00001	0.001	0.0001	1	0	uniform																	
+kDeSkp2_1		log	0.00001	0.001	0.0001	1	0	uniform																	
+kDeSkp2_2		log	0.0002	0.02	0.002	1	0	uniform																	
+kAsTP53PCDKN1A		log	0.03	3	0.3	1	0	uniform																	
+kDiTP53PCDKN1A		log	0.015	1.5	0.15	1	0	uniform																	
+kSyCDKN1A_1		log	0.000001	0.0001	1.00E-05	1	0	uniform																	
+kSyCDKN1A_2		log	0.4	40	4	1	0	uniform																	
+kDeCDKN1A_1		log	0.000002	0.0002	2.00E-05	1	0	uniform																	
+kDeCDKN1A_2		log	0.000025	0.0025	0.00025	1	0	uniform																	
+kAsCdkn1aC		log	0.0007	0.07	0.007	1	0	uniform																	
+kDiCdkn1aC		log	0.00003	0.003	0.0003	1	0	uniform																	
+kPhCDKN1AByCe		log	0.0005	0.05	0.005	1	0	uniform																	
+kPhCDKN1AByCa		log	0.00002	0.002	0.0002	1	0	uniform																	
+kPhCDKN1AByCb		log	0.0002	0.02	0.002	1	0	uniform																	
+kDpCDKN1A		log	0.0002	0.02	0.002	1	0	uniform				#	Name	Compartment	     Type     	Unit	Initial Concentration [Unit]	Initial Number	Concentration [Unit]	Number	Rate [Unit/s]	Number Rate [#/s]	Initial Expression [Unit]	Expression [Unit] or [Unit/s]	Noise Expression
+ic_wt_cell__CCND		lin	1.00E-01	1.00E+01	4.575035203	1	0	uniform			1	1	_cell__CCND	cell	reactions	mol/l	1	6.02E+23	1	6.02E+23	0	0			
+ic_wt_cell__CCNE_CDKN1A_		lin	5.69E-03	5.69E-01	0.094386049	1	0	uniform			2	2	_cell__CCNE_CDKN1A_	cell	reactions	mol/l	0.23224914	1.40E+23	0.1453989	8.76E+22	-1.09E-05	-6.5693E+18			
+ic_wt_cell__E2F_DBD_RB1_Ser332u_		lin	9.92E-04	9.92E-02	0.007730176	1	0	uniform			3	3	_cell__E2F_DBD_RB1_Ser332u_	cell	reactions	mol/l	0.018479024	1.11E+22	0.625379024	3.77E+23	1.46E-06	8.78982E+17			
+ic_wt_cell__E2F_DBD_RB1_Ser332p_		lin	3.48E-04	3.48E-02	0.018110245	1	0	uniform			4	4	_cell__E2F_DBD_RB1_Ser332p_	cell	reactions	mol/l	3.81E-05	2.29334E+19	0.019248164	1.16E+22	1.77E-06	1.06785E+18			
+ic_wt_cell__CCNA_CDKN1A_		lin	1.27E-02	1.27E+00	0.108777077	1	0	uniform			5	5	_cell__CCNA_CDKN1A_	cell	reactions	mol/l	0.007028495	4.23E+21	0.350222961	2.11E+23	2.82E-05	1.70046E+19			
+ic_wt_cell__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_		lin	1.47E-02	1.47E+00	0.175806765	1	0	uniform			6	6	_cell__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_	cell	reactions	mol/l	0.001882363	1.13359E+21	0.029753428	1.79E+22	3.32E-06	2.00222E+18			
+ic_wt_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_		lin	2.09E-03	2.09E-01	0.010201595	1	0	uniform			7	7	_cell__E2F_DBD_RB1_1_Ser332u__RB1_E2F_1_Ser807_Ser811u_	cell	reactions	mol/l	0.071461332	4.30E+22	0.07978641	4.80E+22	-3.32E-06	-1.99799E+18			
+ic_wt_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_		lin	7.61E-04	7.61E-02	0.026831368	1	0	uniform			8	8	_cell__E2F_DBD_RB1_1_Ser332p__RB1_E2F_1_Ser807_Ser811u_	cell	reactions	mol/l	0.000150539	9.06565E+19	0.002463369	1.48E+21	1.19E-07	7.14327E+16			
+ic_wt_cell__RB1_E2F_Ser807_Ser811u_		lin	7.65E-03	7.65E-01	0.534438862	1	0	uniform			9	9	_cell__RB1_E2F_Ser807_Ser811u_	cell	reactions	mol/l	0.087642687	5.28E+22	0.005468604	3.29327E+21	-2.53E-08	-1.52216E+16			
+ic_wt_cell__RB1_E2F_Ser807_Ser811p_		lin	8.95E-02	8.95E+00	0.511864834	1	0	uniform			10	10	_cell__RB1_E2F_Ser807_Ser811p_	cell	reactions	mol/l	0.84074544	5.06E+23	0.912281615	5.49E+23	3.22E-06	1.94177E+18			
+ic_wt_cell__PPP2R2B_ENSA_ARPP19_		lin	5.62E-05	5.62E-03	0.001878299	1	0	uniform			11	11	_cell__PPP2R2B_ENSA_ARPP19_	cell	reactions	mol/l	0.077191625	4.65E+22	0.233629577	1.41E+23	-2.02E-06	-1.21519E+18			
+ic_wt_cell__APC_FBXO5_FZR1_CDC20_Ser355u_		lin	3.70E-01	3.70E+01	33.65538991	1	0	uniform			12	12	_cell__APC_FBXO5_FZR1_CDC20_Ser355u_	cell	reactions	mol/l	4.0287133	2.43E+24	4.711923004	2.84E+24	1.73E-05	1.04442E+19			
+ic_wt_cell__CDC20_APC_		lin	2.16E-02	2.16E+00	0.0216	1	0	uniform			13	13	_cell__CDC20_APC_	cell	reactions	mol/l	0.22995279	1.38E+23	0.264036322	1.59E+23	1.97E-05	1.18692E+19			
+ic_wt_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_		lin	7.19E-02	7.19E+00	4.976837337	1	0	uniform			14	14	_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__CDC20_APC_1_	cell	reactions	mol/l	0.069890078	4.21E+22	0.002535552	1.52695E+21	4.19E-07	2.52542E+17			
+ic_wt_cell__APC_FBXO5_FZR1_CDC20_Ser355p_		lin	4.55E-02	4.55E+00	2.507674245	1	0	uniform			15	15	_cell__APC_FBXO5_FZR1_CDC20_Ser355p_	cell	reactions	mol/l	0.063091065	3.80E+22	0.012693239	7.64E+21	1.04E-06	6.29264E+17			
+ic_wt_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_		lin	2.66E-03	2.66E-01	0.266	1	0	uniform			16	16	_cell__APC_FBXO5_FZR1_CDC20_1_Ser355u__FZR1_APC_1_FBXO5_nTermu_	cell	reactions	mol/l	0.71354419	4.30E+23	0.019436349	1.17E+22	-1.49E-06	-8.94569E+17			
+ic_wt_cell__FZR1_APC_FBXO5_nTermu_		lin	2.07E-04	2.07E-02	0.0207	1	0	uniform			17	17	_cell__FZR1_APC_FBXO5_nTermu_	cell	reactions	mol/l	0.000571341	3.4407E+20	0.001529361	9.21003E+20	3.23E-08	1.94309E+16			
+ic_wt_cell__FZR1_APC_FBXO5_nTermp_		lin	8.73E-02	8.73E+00	2.041048724	1	0	uniform			18	18	_cell__FZR1_APC_FBXO5_nTermp_	cell	reactions	mol/l	0.16112308	9.70E+22	0.725622412	4.37E+23	1.88E-05	1.13066E+19			
+ic_wt_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_		lin	8.46E-03	8.46E-01	0.376266238	1	0	uniform			19	19	_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355u__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_	cell	reactions	mol/l	0.10894131	6.56E+22	0.252610828	1.52E+23	-1.73E-05	-1.04372E+19			
+ic_wt_cell__FBXO5_APC_FZR1_Ser182u_		lin	2.16E-02	2.16E+00	0.0216	1	0	uniform			20	20	_cell__FBXO5_APC_FZR1_Ser182u_	cell	reactions	mol/l	0.000717816	4.32279E+20	0.376929609	2.27E+23	3.48E-05	2.09325E+19			
+ic_wt_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_		lin	1.04E-03	1.04E-01	0.002546673	1	0	uniform			21	21	_cell__APC_FBXO5_1_FZR1_CDC20_2_Ser355p__FBXO5_APC_1_FZR1_3_Ser182u__FZR1_APC_2_FBXO5_3_nTermu_	cell	reactions	mol/l	0.002212547	1.33243E+21	0.000747661	4.50252E+20	9.53E-09	5.74124E+15			
+ic_wt_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_		lin	3.27E-04	3.27E-02	0.029785255	1	0	uniform			22	22	_cell__APC_FBXO5_FZR1_CDC20_1_Ser355p__FZR1_APC_1_FBXO5_nTermu_	cell	reactions	mol/l	0.013607533	8.19E+21	5.34E-05	3.21521E+19	9.19E-11	5.53247E+13			
+ic_wt_cell__FBXO5_APC_FZR1_Ser182p_		lin	2.90E-04	2.90E-02	0.02008322	1	0	uniform			23	23	_cell__FBXO5_APC_FZR1_Ser182p_	cell	reactions	mol/l	1.88E-05	1.13246E+19	0.00276969	1.66795E+21	3.31E-07	1.99584E+17			
+ic_wt_cell__FOXM1_DBD_Thr600u_		lin	3.94E-03	3.94E-01	0.00394	1	0	uniform			24	24	_cell__FOXM1_DBD_Thr600u_	cell	reactions	mol/l	0.005564734	3.35116E+21	0.106390978	6.41E+22	-1.19E-06	-7.16826E+17			
+ic_wt_cell__FOXM1_DBD_Thr600p_		lin	6.29E-02	6.29E+00	5.652769178	1	0	uniform			25	25	_cell__FOXM1_DBD_Thr600p_	cell	reactions	mol/l	0.000381116	2.29514E+20	0.233218422	1.40E+23	2.78E-05	1.67411E+19			
+ic_wt_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_		lin	0.00E+00	0.00E+00	0.00E+00	0	0	uniform			26	26	_cell__CCNB_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_	cell	reactions	mol/l	1.90E-07	1.14617E+17	5.38E-05	3.23894E+19	2.97E-09	1.78685E+15			
+ic_wt_cell__CCNB_promoter_FOXM1_		lin	1.00E-05	1.00E-03	1.00E-04	0	0	uniform			27	27	_cell__CCNB_promoter_FOXM1_	cell	reactions	mol/l	9.98E-05	6.01068E+19	4.62E-05	2.7832E+19	-2.97E-09	-1.78685E+15			
+ic_wt_cell__CDC20_promoter_FOXM1_		lin	1.00E-05	1.00E-03	1.00E-04	0	0	uniform			28	28	_cell__CDC20_promoter_FOXM1_	cell	reactions	mol/l	9.99E-05	6.01755E+19	6.82E-05	4.1079E+19	-2.59E-09	-1.55722E+15			
+ic_wt_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_		lin	0.00E+00	0.00E+00	0.00E+00	0	0	uniform			29	29	_cell__CDC20_promoter_FOXM1_1__FOXM1_DBD_1_Thr600p_	cell	reactions	mol/l	7.62E-08	4.58799E+16	3.18E-05	1.91424E+19	2.59E-09	1.55722E+15			
+ic_wt_cell__WEE1_Ser123u_		lin	2.71E-03	2.71E-01	0.271	1	0	uniform			30	30	_cell__WEE1_Ser123u_	cell	reactions	mol/l	0.98044163	5.90E+23	0.973184943	5.86E+23	-2.71E-06	-1.6312E+18			
+ic_wt_cell__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_		lin	5.17E-04	5.17E-02	0.050794932	1	0	uniform			31	31	_cell__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_	cell	reactions	mol/l	0.007512915	4.52E+21	0.221066977	1.33E+23	2.40E-05	1.44592E+19			
+ic_wt_cell__WEE1_Ser123p_		lin	9.73E-02	9.73E+00	7.50457194	1	0	uniform			32	32	_cell__WEE1_Ser123p_	cell	reactions	mol/l	0.019558367	1.18E+22	0.026815054	1.61E+22	2.71E-06	1.6312E+18			
+ic_wt_cell__CDC25_pSitesp_		lin	9.71E-02	9.71E+00	0.243834123	1	0	uniform			33	33	_cell__CDC25_pSitesp_	cell	reactions	mol/l	0.018438067	1.11E+22	0.012484483	7.52E+21	1.49E-06	8.95297E+17			
+ic_wt_cell__CDC25_pSitesu_		lin	2.91E-03	2.91E-01	0.228564975	1	0	uniform			34	34	_cell__CDC25_pSitesu_	cell	reactions	mol/l	0.98156193	5.91E+23	0.987515514	5.95E+23	-1.49E-06	-8.95297E+17			
+ic_wt_cell__MASTL_Thr198u_		lin	6.05E-02	6.05E+00	0.807227116	1	0	uniform			35	35	_cell__MASTL_Thr198u_	cell	reactions	mol/l	0.99752571	6.01E+23	0.988700374	5.95E+23	-1.34E-06	-8.05618E+17			
+ic_wt_cell__MASTL_Thr198p_		lin	3.95E-02	3.95E+00	3.047740733	1	0	uniform			36	36	_cell__MASTL_Thr198p_	cell	reactions	mol/l	0.002474295	1.49006E+21	0.011299631	6.80E+21	1.34E-06	8.05618E+17			
+ic_wt_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_		lin	3.09E-02	3.09E+00	1.134106352	1	0	uniform			37	37	_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_	cell	reactions	mol/l	0.82686306	4.98E+23	0.983537883	5.92E+23	-2.03E-06	-1.22213E+18			
+ic_wt_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_		lin	4.42E-02	4.42E+00	0.103019676	1	0	uniform			38	38	_cell__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_	cell	reactions	mol/l	0.000328561	1.97864E+20	9.17E-05	5.52167E+19	1.15E-08	6.93641E+15			
+ic_wt_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_		lin	2.49E-02	2.49E+00	0.36516157	1	0	uniform			39	39	_cell__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_	cell	reactions	mol/l	0.17280837	1.04E+23	0.016370418	9.86E+21	2.02E-06	1.21519E+18			
+ic_wt_cell__CCNE_promoter_E2F_		lin	0.00001	0.001	1.00E-04	0	0	uniform			40	40	_cell__CCNE_promoter_E2F_	cell	reactions	mol/l	8.45E-05	5.08745E+19	1.35E-05	8.10617E+18	-5.76E-11	-3.46995E+13			
+ic_wt_cell__CCNA_promoter_E2F_		lin	0.00001	0.001	1.00E-04	0	0	uniform			41	41	_cell__CCNA_promoter_E2F_	cell	reactions	mol/l	8.45E-05	5.08745E+19	1.35E-05	8.10617E+18	-5.76E-11	-3.46995E+13			
+ic_wt_cell__E2F_promoter_E2F_		lin	0.00001	0.001	1.00E-04	0	0	uniform			42	42	_cell__E2F_promoter_E2F_	cell	reactions	mol/l	8.45E-05	5.08745E+19	1.35E-05	8.10617E+18	-5.76E-11	-3.46995E+13			
+ic_wt_cell__FBXO5_promoter_E2F_		lin	0.00001	0.001	1.00E-04	0	0	uniform			43	43	_cell__FBXO5_promoter_E2F_	cell	reactions	mol/l	8.45E-05	5.08745E+19	1.35E-05	8.10617E+18	-5.76E-11	-3.46995E+13			
+ic_wt_cell__FOXM1_promoter_E2F_		lin	0.00001	0.001	1.00E-04	0	0	uniform			44	44	_cell__FOXM1_promoter_E2F_	cell	reactions	mol/l	8.45E-05	5.08745E+19	1.35E-05	8.10617E+18	-5.76E-11	-3.46995E+13			
+ic_wt_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_		lin	0	0	0	0	0	uniform			45	45	_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_	cell	reactions	mol/l	1.55E-05	9.34695E+18	8.40E-05	5.05562E+19	-1.70E-10	-1.02137E+14			
+ic_wt_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_		lin	0	0	0	0	0	uniform			46	46	_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332u_	cell	reactions	mol/l	1.55E-05	9.34695E+18	8.40E-05	5.05562E+19	-1.70E-10	-1.02137E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_		lin	0	0	0	0	0	uniform			47	47	_cell__E2F_DBD_1_RB1_Ser332u__E2F_promoter_E2F_1_	cell	reactions	mol/l	1.55E-05	9.34695E+18	8.40E-05	5.05562E+19	-1.70E-10	-1.02137E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_		lin	0	0	0	0	0	uniform			48	48	_cell__E2F_DBD_1_RB1_Ser332u__FBXO5_promoter_E2F_1_	cell	reactions	mol/l	1.55E-05	9.34695E+18	8.40E-05	5.05562E+19	-1.70E-10	-1.02137E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_		lin	0	0	0	0	0	uniform			49	49	_cell__E2F_DBD_1_RB1_Ser332u__FOXM1_promoter_E2F_1_	cell	reactions	mol/l	1.55E-05	9.34695E+18	8.40E-05	5.05562E+19	-1.70E-10	-1.02137E+14			
+ic_wt_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_		lin	0	0	0	0	0	uniform			50	50	_cell__CCNE_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_	cell	reactions	mol/l	0	0	2.59E-06	1.55905E+18	2.27E-10	1.36837E+14			
+ic_wt_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_		lin	0	0	0	0	0	uniform			51	51	_cell__CCNA_promoter_E2F_1__E2F_DBD_1_RB1_Ser332p_	cell	reactions	mol/l	0	0	2.59E-06	1.55905E+18	2.27E-10	1.36837E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332p__E2F_promoter_E2F_1_		lin	0	0	0	0	0	uniform			52	52	_cell__E2F_DBD_1_RB1_Ser332p__E2F_promoter_E2F_1_	cell	reactions	mol/l	0	0	2.59E-06	1.55905E+18	2.27E-10	1.36837E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332p__FBXO5_promoter_E2F_1_		lin	0	0	0	0	0	uniform			53	53	_cell__E2F_DBD_1_RB1_Ser332p__FBXO5_promoter_E2F_1_	cell	reactions	mol/l	0	0	2.59E-06	1.55905E+18	2.27E-10	1.36837E+14			
+ic_wt_cell__E2F_DBD_1_RB1_Ser332p__FOXM1_promoter_E2F_1_		lin	0	0	0	0	0	uniform			54	54	_cell__E2F_DBD_1_RB1_Ser332p__FOXM1_promoter_E2F_1_	cell	reactions	mol/l	0	0	2.59E-06	1.55905E+18	2.27E-10	1.36837E+14			
+ic_wt_cell__SKP2		lin	0.1	10	1	1	0	uniform			55	55	_cell__SKP2	cell	reactions	mol/l	1	6.02E+23	0.546835172	3.29E+23	2.40E-05	1.44538E+19			
+ic_wt_cell__TP53_DBD_Ser15p_		lin	0	0	0	0	0	uniform			56	56	_cell__TP53_DBD_Ser15p_	cell	reactions	mol/l	0	0	0	0	0	0			
+ic_wt_cell__CDKN1A_promoter_TP53_		lin	0.00001	0.001	0.0001	0	0	uniform			57	57	_cell__CDKN1A_promoter_TP53_	cell	reactions	mol/l	0.0001	6.02214E+19	0.0001	6.02214E+19	0	0			
+ic_wt_cell__CDKN1A_promoter_TP53_1__TP53_DBD_1_Ser15p_		lin	0	0	0	0	0	uniform			58	58	_cell__CDKN1A_promoter_TP53_1__TP53_DBD_1_Ser15p_	cell	reactions	mol/l	0	0	0	0	0	0			
+ic_wt_cell__CDKN1A_CCNE_A_B_Ser130u_		lin	0.002395157	0.239515721	0.023951572	1	0	uniform			59	59	_cell__CDKN1A_CCNE_A_B_Ser130u_	cell	reactions	mol/l	0	0	0.015491113	9.33E+21	-1.87E-06	-1.1236E+18			
+ic_wt_cell__CCNA_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	4.78E-05	0.004782476	0.000478248	1	0	uniform			60	60	_cell__CCNA_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_	cell	reactions	mol/l	0	0	0.027617492	1.66E+22	-2.34E-08	-1.40713E+16			
+ic_wt_cell__CCNE_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.002456584	0.245658365	0.024565836	1	0	uniform			61	61	_cell__CCNE_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_	cell	reactions	mol/l	0	0	0.004320877	2.60209E+21	-1.04E-06	-6.24534E+17			
+ic_wt_cell__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	1.31E-05	0.001312958	0.000131296	1	0	uniform			62	62	_cell__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_	cell	reactions	mol/l	0	0	0.002090538	1.26E+21	7.53E-08	4.53737E+16			
+ic_wt_cell__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	4.72E-05	0.004718004	0.0004718	1	0	uniform			63	63	_cell__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_	cell	reactions	mol/l	0	0	0.017839117	1.07E+22	4.32E-07	2.60152E+17			
+ic_wt_cell__CDKN1A_CCNE_A_B_Ser130p_		lin	0.003831384	0.383138363	0.038313836	1	0	uniform			64	64	_cell__CDKN1A_CCNE_A_B_Ser130p_	cell	reactions	mol/l	0	0	0.02791655	1.68E+22	-2.51E-06	-1.51256E+18			
+oCCNA		lin	0	0.305627054	0.222312989	1	0	laplace	0;1		65		New Species	cell	reactions	mol/l	1								
+oCCNB		lin	0	0.534931031	0.534923698	1	0	laplace	0;1																
+oCCNE		lin	0	0.625025635	0.621594835	1	0	laplace	0;1																
+oE2F		lin	0	0.710586775	0.709451269	1	0	laplace	0;1																
+oRB1_pSer807Ser811		lin	0	0.092359914	0.057363109	1	0	laplace	0;1																
+oSKP2		lin	0	0.325469225	0.271224354	1	0	laplace	0;1																
+oCDKN1A		lin	0	0.569668525	0.474723771	1	0	laplace	0;1																
+sCCNA		lin	0.1	10	5.887017453	1	1	laplace	0;10																
+sCCNB		lin	0.1	10	2.873916621	1	1	laplace	0;10																
+sCCNE		lin	0.1	10	6.924959631	1	1	uniform																	
+sE2F		lin	0.1	10	3.573979854	1	1	uniform																	
+sRB1_pSer807Ser811		lin	0.1	10	2.174059617	1	1	uniform																	
+sSKP2		lin	0.1	10	1	1	1	uniform																	
+sCDKN1A		lin	0.1	10	1	1	1	uniform																	
+noiseParameter1		lin	0	0	0	0	0	uniform																	
+noiseParameter2		lin	0.1	10	1	0	0	uniform																	
