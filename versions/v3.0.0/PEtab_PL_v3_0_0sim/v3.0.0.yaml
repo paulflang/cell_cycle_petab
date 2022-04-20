@@ -16,13 +16,13 @@
 #   * we may be able to obtain prior estimates of observation function parameters
 
 format_version: 1
-parameter_file: parameters_v3.0.0_optimized.tsv
+parameter_file: parameters_v3.0.0.tsv
 problems:
 - condition_files:
-  - ../experimentalCondition_v3.0.0.tsv
+  - experimentalCondition_v3.0.0.tsv
   measurement_files:
-  - ../simulatedData_v3.0.0_0.1noise.tsv  # simulatedData_v3.0.0_0noise.tsv  # simulatedData_v3.0.0_0.1noise.tsv  # Stallaert_CellSystems2021_Data.tsv
+  - simulatedData_v3.0.0_0.1noise.tsv  # simulatedData_v3.0.0_0noise.tsv  # simulatedData_v3.0.0_0.1noise.tsv  # Stallaert_CellSystems2021_Data.tsv
   observable_files:
-  - ../observables_v3.0.0.tsv
+  - observables_v3.0.0.tsv
   sbml_files:
-  - ../cell_cycle_v3.0.0_rescaled_sbml.xml
+  - cell_cycle_v3.0.0_rescaled_sbml.xml
