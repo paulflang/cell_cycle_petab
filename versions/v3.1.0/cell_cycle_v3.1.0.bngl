@@ -1,115 +1,115 @@
 ###
 #@creatorEmail:'paul.lang@wolfson.ox.ac.uk'
 #@creatorName:'Lang Paul'
-#@notes:'This is a manual translation of an SBML model created on 29/11/2020.
+#@notes:'This is a manual translation of an SBML model created on 08/06/2020.
 ###
 begin model
 begin parameters
-	kPhRbD 0.005544005544/6.022e23
-	kPhRbE 0.00693000693/6.022e23
+	kPhRbD 0.005544005544/1
+	kPhRbE 0.00693000693/1
 	kDpRb 0.001386001386
-	kPhRb 0.02079002079/6.022e23
-	kSyCe1 1.386001386e-05*6.022e23
+	kPhRb 0.02079002079/1
+	kSyCe1 1.386001386e-05*1
 	kSyCe2 4.158004158
 	kDeCe 0.0001386001386
 	kDiE2fRb 0.0003465003465
-	kAsE2fRb 0.3465003465/6.022e23
-	kSyE2f1 6.93000693e-06*6.022e23
+	kAsE2fRb 0.3465003465/1
+	kSyE2f1 6.93000693e-06*1
 	kSyE2f2 0.693000693
 	kDeE2f1 6.93000693e-05
-	kDeE2f2 0.001386001386/6.022e23
-	kPhE2f 0.001386001386/6.022e23
-	kDpE2f2 0.0693000693/6.022e23
-	kSyEmi1 3.465003465e-05*6.022e23
+	kDeE2f2 0.001386001386/1
+	kPhE2f 0.001386001386/1
+	kDpE2f2 0.0693000693/1
+	kSyEmi1 3.465003465e-05*1
 	kSyEmi2 3.465003465
 	kDeEmi1 0.0003465003465
 	kDeEmi2 0.0003465003465
 	kDeEmi3 0.003465003465
-	kPhEmiA 3.465003465e-05/6.022e23
-	kPhEmiB 0.00017325017325/6.022e23
+	kPhEmiA 3.465003465e-05/1
+	kPhEmiB 0.00017325017325/1
 	kDpEmi 3.465003465e-06
-	kSyCa1 6.93000693e-06*6.022e23
+	kSyCa1 6.93000693e-06*1
 	kSyCa2 0.5197505197
 	kDeCa1 6.93000693e-06
-	kDeCa2 0.002772002772/6.022e23
-	kDeCa3 0.000693000693/6.022e23
+	kDeCa2 0.002772002772/1
+	kDeCa3 0.000693000693/1
 	kDpCdh 0.003465003465
-	kPhCdhA 0.01732501732/6.022e23
-	kPhCdhE 0.000693000693/6.022e23
-	kPhCdhB 0.1732501733/6.022e23
+	kPhCdhA 0.01732501732/1
+	kPhCdhE 0.000693000693/1
+	kPhCdhB 0.1732501733/1
 	kDiACE 0.0003465003465
-	kAsACE 0.3465003465/6.022e23
+	kAsACE 0.3465003465/1
 	kDiACdh 0.0003465003465
-	kAsACdh 0.3465003465/6.022e23
-	kPhCeA 0.00693000693/6.022e23
-	kPhCeE 6.93000693e-05/6.022e23
-	kPhFoxE 0.000693000693/6.022e23
-	kPhFoxA 0.000693000693/6.022e23
-	kPhFoxB 0.003465003465/6.022e23
+	kAsACdh 0.3465003465/1
+	kPhCeA 0.00693000693/1
+	kPhCeE 6.93000693e-05/1
+	kPhFoxE 0.000693000693/1
+	kPhFoxA 0.000693000693/1
+	kPhFoxB 0.003465003465/1
 	kDpFox 1e-05
-	kSyCb1 6.93000693e-06*6.022e23
+	kSyCb1 6.93000693e-06*1
 	kSyCb2 0.5197505197
 	kDeCb1 6.93000693e-06
-	kDeCb2 0.00086625086625/6.022e23
-	kDeCb3 0.00086625086625/6.022e23
-	kPhEnsa 0.000693000693/6.022e23
+	kDeCb2 0.00086625086625/1
+	kDeCb3 0.00086625086625/1
+	kPhEnsa 0.000693000693/1
 	kDpEnsa 0.0003465003465
-	kPhGw 0.00693000693/6.022e23
+	kPhGw 0.00693000693/1
 	kDpGw1 0.0017325017325
-	kDpGw2 0.0693000693/6.022e23
-	kWee1 6.93000693e-05/6.022e23
-	kWee2 0.00693000693/6.022e23
-	kPhWeeA 0.000693000693/6.022e23
-	kPhWeeB 0.00693000693/6.022e23
-	kDpWee 0.0693000693/6.022e23
-	kCdc25_1 0.000693000693/6.022e23
-	kCdc25_2 0.00693000693/6.022e23
-	kDpCdc25 0.0693000693/6.022e23
+	kDpGw2 0.0693000693/1
+	kWee1 6.93000693e-05/1
+	kWee2 0.00693000693/1
+	kPhWeeA 0.000693000693/1
+	kPhWeeB 0.00693000693/1
+	kDpWee 0.0693000693/1
+	kCdc25_1 0.000693000693/1
+	kCdc25_2 0.00693000693/1
+	kDpCdc25 0.0693000693/1
 	kDipEB55 4.7124047124e-05
-	kAspEB55 0.39501039501/6.022e23
-	kSyCdc_1 6.93000693e-06*6.022e23
+	kAspEB55 0.39501039501/1
+	kSyCdc_1 6.93000693e-06*1
 	kSyCdc_2 0.693000693
 	kDeCdc_1 2.772002772e-05
-	kDeCdc_2 0.0002772002772/6.022e23
+	kDeCdc_2 0.0002772002772/1
 	kDipACdc 0.00086625086625
-	kAspACdc 0.00693000693/6.022e23
-	kPhApcA 6.93000693e-05/6.022e23
+	kAspACdc 0.00693000693/1
+	kPhApcA 6.93000693e-05/1
 #	kPhApcB 6.93000693e-05 #
-	kDpApc_1 0/6.022e23
-	kDpApc_2 0.03465003465/6.022e23
-	kSyFox1 6.93000693e-06*6.022e23
+	kDpApc_1 0/1
+	kDpApc_2 0.03465003465/1
+	kSyFox1 6.93000693e-06*1
 	kSyFox2 0.5197505197
 	kDeFox1 6.93000693e-06
-	kDeFox2 0.003465003465/6.022e23
-	kAsEPx 0.3465003465/6.022e23
+	kDeFox2 0.003465003465/1
+	kAsEPx 0.3465003465/1
 	kDiEPx 0.03465003465
-	kAsFPcb 0.3465003465/6.022e23
+	kAsFPcb 0.3465003465/1
 	kDiFPcb 0.0693000693
-	kAsFPcdc 0.3465003465/6.022e23
+	kAsFPcdc 0.3465003465/1
 	kDiFPcdc 0.17325017325
-	kPhC25B 0.00693000693/6.022e23
-	kPhCAEE 0.00055440055/6.022e23  # former kPhCdhEf4
-	kPhCAEA 0.01386001385/6.022e23  # former kPhCdhAf4
-	kPhCAEB 0.13860013864/6.022e23  # former kPhCdhBf4
-	ikSyCb 1.0
-	jiWee 0.1*6.022e23
+	kPhC25B 0.00693000693/1
+	kPhCAEE 0.00055440055/1  # former kPhCdhEf4
+	kPhCAEA 0.01386001385/1  # former kPhCdhAf4
+	kPhCAEB 0.13860013864/1  # former kPhCdhBf4
+#	ikSyCb 1.0
+#	jiWee 0.1*1
 	kDpE2f1 0
-	kPhC25A 0/6.022e23
+	kPhC25A 0/1
 #	iWee_0 0
-    kSySkp2 1e-04*6.022e23
+    kSySkp2 1e-04*1
     kDeSkp2_1 0.0001
-    kDeSkp2_2 0.002/6.022e23
-	kAsTP53PCDKN1A 0.3/6.022e23
+    kDeSkp2_2 0.002/1
+	kAsTP53PCDKN1A 0.3/1
 	kDiTP53PCDKN1A 0.15
-	kSyCDKN1A_1 1e-05*6.022e23
+	kSyCDKN1A_1 1e-05*1
 	kSyCDKN1A_2 4
 	kDeCDKN1A_1 0.00002
-    kDeCDKN1A_2 0.00025/6.022e23
-    kAsCdkn1aC 0.007/6.022e23
+    kDeCDKN1A_2 0.00025/1
+    kAsCdkn1aC 0.007/1
 	kDiCdkn1aC 0.0003
-	kPhCDKN1AByCe 0.005/6.022e23
-	kPhCDKN1AByCa 0.0005/6.022e23
-	kPhCDKN1AByCb 0.005/6.022e23
+	kPhCDKN1AByCe 0.005/1
+	kPhCDKN1AByCa 0.0002/1
+	kPhCDKN1AByCb 0.002/1
 	kDpCDKN1A 0.002
 end parameters
 begin compartments
@@ -131,7 +131,7 @@ begin molecule types
 	FBXO5_promoter(E2F)
 	CDC20_promoter(FOXM1)
 	FBXO5(APC,FZR1,Ser182~u~p) # The FBXO5 C-terminus binds to APC and FZR1
-	iWEE()
+#	iWEE()
 	FOXM1(DBD,Thr600~u~p)
 	WEE1(Ser123~u~p)
 	CCNE_promoter(E2F)
@@ -144,62 +144,67 @@ begin molecule types
 	SKP2()
 	CDKN1A(CCNE_A_B,Ser130~u~p)
 	TP53(DBD,Ser15~u~p)
-	CDKN1A_promoter(TP53)
+ 	CDKN1A_promoter(TP53)
 end molecule types
 begin seed species
-	@cell:CCND() (1.0*6.022e23)  #Cd
-	@cell:CCNE(CDKN1A) (0.232249137*6.022e23)  #Ce
-	@cell:E2F(DBD,RB1,Ser332~u) (0.0184790235*6.022e23)  #E2f
-	@cell:E2F(DBD,RB1,Ser332~p) (3.8081857e-05*6.022e23)  #pE2f
-	@cell:CCNA(CDKN1A) (0.00702849494*6.022e23)  #Ca
-	@cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) (0.00188236293*6.022e23)  #Cb
-	@cell:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) (0.0714613324*6.022e23)  #E2fRb
-	@cell:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) (0.000150538592*6.022e23)  #pE2fRb
-	@cell:RB1(E2F,Ser807_Ser811~u) (0.0876426874*6.022e23)  #Rb
-	@cell:RB1(E2F,Ser807_Ser811~p) (0.840745442*6.022e23)  #pRb
-	@cell:PPP2R2B(ENSA_ARPP19) (0.0771916254*6.022e23)  #B55
-	@cell:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*6.022e23)  #Apc
-	@cell:CDC20(APC) (0.229952789*6.022e23)  #Cdc20
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*6.022e23)  #Apc # This was added manually when checking for model correctness
-	@cell:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*6.022e23)  #pApc
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*6.022e23)  #ApcCdh
-	@cell:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*6.022e23)  #Cdh
-	@cell:FZR1(APC,FBXO5,nTerm~p) (0.16112308*6.022e23)  #pCdh
-	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*6.022e23)  #ACE
-	@cell:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*6.022e23)  #Emi
-	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*6.022e23)  #pACE
-	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*6.022e23)  #pApcCdh
-	@cell:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*6.022e23)  #pEmi
-	@cell:FOXM1(DBD,Thr600~u) (0.0055647336*6.022e23)  #Fox
-	@cell:FOXM1(DBD,Thr600~p) (0.00038111617*6.022e23)  #pFox
-	@cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) (1.90325916e-07*6.022e23)  #pFoxProCb
-	@cell:CCNB_promoter(FOXM1) (9.98096741e-05*6.022e23)  #ProCb
-	@cell:CDC20_promoter(FOXM1) (9.99238147e-05*6.022e23)  #ProCdc
-	@cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) (7.61853468e-08*6.022e23)  #pFoxProCdc
-	@cell:WEE1(Ser123~u) (0.980441633*6.022e23)  #Wee
-	@cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*6.022e23)  #pCb
-	@cell:WEE1(Ser123~p) (0.019558367*6.022e23)  #pWee
-	@cell:CDC25(pSites~p) (0.0184380668*6.022e23)  #pCdc25
-	@cell:CDC25(pSites~u) (0.981561933*6.022e23)  #Cdc25
-	@cell:MASTL(Thr198~u) (0.997525705*6.022e23)  #Gw
-	@cell:MASTL(Thr198~p) (0.00247429497*6.022e23)  #pGw
-	@cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) (0.826863064*6.022e23)  #Ensa
-	@cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) (0.000328561161*6.022e23)  #pEnsa
-	@cell:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) (0.172808375*6.022e23)  #pEB55
-	@cell:CCNE_promoter(E2F) (8.44790241e-05*6.022e23)  #ProCe
-	@cell:CCNA_promoter(E2F) (8.44790241e-05*6.022e23)  #ProCa
-	@cell:E2F_promoter(E2F) (8.44790241e-05*6.022e23)  #ProE2f
-	@cell:FBXO5_promoter(E2F) (8.44790241e-05*6.022e23)  #ProEmi
-	@cell:FOXM1_promoter(E2F) (8.44790241e-05*6.022e23)  #ProFox
-	@cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProCe
-	@cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProCa
-	@cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProE2f
-	@cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProEmi
-	@cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*6.022e23)  #E2fProFox
-	@cell:iWEE() (0*6.022e23)  #iWee
-	@cell:SKP2() (1*6.022e23)  #Ca
-	@cell:TP53(DBD,Ser15~p) (0*6.022e23)
-	@cell:CDKN1A_promoter(TP53) (8.44790241e-05*6.022e23)
+	@cell:CCND() (1.0*1)  #Cd
+	@cell:CCNE(CDKN1A) (0.232249137*1)  #Ce
+	@cell:E2F(DBD,RB1,Ser332~u) (0.0184790235*1)  #E2f
+	@cell:E2F(DBD,RB1,Ser332~p) (3.8081857e-05*1)  #pE2f
+	@cell:CCNA(CDKN1A) (0.00702849494*1)  #Ca
+	@cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) (0.00188236293*1)  #Cb
+	@cell:E2F(DBD,RB1!1,Ser332~u).RB1(E2F!1,Ser807_Ser811~u) (0.0714613324*1)  #E2fRb
+	@cell:E2F(DBD,RB1!1,Ser332~p).RB1(E2F!1,Ser807_Ser811~u) (0.000150538592*1)  #pE2fRb
+	@cell:RB1(E2F,Ser807_Ser811~u) (0.0876426874*1)  #Rb
+	@cell:RB1(E2F,Ser807_Ser811~p) (0.840745442*1)  #pRb
+	@cell:PPP2R2B(ENSA_ARPP19) (0.0771916254*1)  #B55
+	@cell:APC(FZR1_CDC20,FBXO5,Ser355~u) (4.02871328*1)  #Apc
+	@cell:CDC20(APC) (0.229952789*1)  #Cdc20
+	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) (0.0698900785*1)  #Apc # This was added manually when checking for model correctness
+	@cell:APC(FZR1_CDC20,FBXO5,Ser355~p) (0.0630910652*1)  #pApc
+	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~u).FZR1(APC!1,FBXO5,nTerm~u) (0.713544185*1)  #ApcCdh
+	@cell:FZR1(APC,FBXO5,nTerm~u) (0.000571340946*1)  #Cdh
+	@cell:FZR1(APC,FBXO5,nTerm~p) (0.16112308*1)  #pCdh
+	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~u).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.108941313*1)  #ACE
+	@cell:FBXO5(APC,FZR1,Ser182~u) (0.000717816142*1)  #Emi
+	@cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355~p).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) (0.00221254711*1)  #pACE
+	@cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).FZR1(APC!1,FBXO5,nTerm~u) (0.0136075334*1)  #pApcCdh
+	@cell:FBXO5(APC,FZR1,Ser182~p) (1.88049366e-05*1)  #pEmi
+	@cell:FOXM1(DBD,Thr600~u) (0.0055647336*1)  #Fox
+	@cell:FOXM1(DBD,Thr600~p) (0.00038111617*1)  #pFox
+	@cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) (1.90325916e-07*1)  #pFoxProCb
+	@cell:CCNB_promoter(FOXM1) (9.98096741e-05*1)  #ProCb
+	@cell:CDC20_promoter(FOXM1) (9.99238147e-05*1)  #ProCdc
+	@cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) (7.61853468e-08*1)  #pFoxProCdc
+	@cell:WEE1(Ser123~u) (0.980441633*1)  #Wee
+	@cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~p) (0.00751291485*1)  #pCb
+	@cell:WEE1(Ser123~p) (0.019558367*1)  #pWee
+	@cell:CDC25(pSites~p) (0.0184380668*1)  #pCdc25
+	@cell:CDC25(pSites~u) (0.981561933*1)  #Cdc25
+	@cell:MASTL(Thr198~u) (0.997525705*1)  #Gw
+	@cell:MASTL(Thr198~p) (0.00247429497*1)  #pGw
+	@cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) (0.826863064*1)  #Ensa
+	@cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) (0.000328561161*1)  #pEnsa
+	@cell:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) (0.172808375*1)  #pEB55
+	@cell:CCNE_promoter(E2F) (8.44790241e-05*1)  #ProCe
+	@cell:CCNA_promoter(E2F) (8.44790241e-05*1)  #ProCa
+	@cell:E2F_promoter(E2F) (8.44790241e-05*1)  #ProE2f
+	@cell:FBXO5_promoter(E2F) (8.44790241e-05*1)  #ProEmi
+	@cell:FOXM1_promoter(E2F) (8.44790241e-05*1)  #ProFox
+	@cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) (1.55209759e-05*1)  #E2fProCe
+	@cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) (1.55209759e-05*1)  #E2fProCa
+	@cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) (1.55209759e-05*1)  #E2fProE2f
+	@cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) (1.55209759e-05*1)  #E2fProEmi
+	@cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) (1.55209759e-05*1)  #E2fProFox
+	@cell:E2F(DBD!1,RB1,Ser332~p).CCNE_promoter(E2F!1) (0*1)  #E2fProCe
+	@cell:E2F(DBD!1,RB1,Ser332~p).CCNA_promoter(E2F!1) (0*1)  #E2fProCa
+	@cell:E2F(DBD!1,RB1,Ser332~p).E2F_promoter(E2F!1) (0*1)  #E2fProE2f
+	@cell:E2F(DBD!1,RB1,Ser332~p).FBXO5_promoter(E2F!1) (0*1)  #E2fProEmi
+	@cell:E2F(DBD!1,RB1,Ser332~p).FOXM1_promoter(E2F!1) (0*1)  #E2fProFox
+#	@cell:iWEE() (0*1)  #iWee
+	@cell:SKP2() (1*1)
+	@cell:TP53(DBD,Ser15~p) (0*1)
+	@cell:CDKN1A_promoter(TP53) (1e-04*1)
 end seed species
 begin observables
 	Species tCCNE CCNE()
@@ -216,10 +221,10 @@ begin reaction rules
 	PhRbE2fByCe: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNE(CDKN1A) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNE(CDKN1A) kPhRbE
 	PhRbE2fByCa: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNA(CDKN1A) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNA(CDKN1A) kPhRb
 	PhRbE2fByCb: @cell:RB1(E2F!1,Ser807_Ser811~u).E2F(DBD,RB1!1,Ser332) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:E2F(DBD,RB1,Ser332) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhRb
-	PhE2fByCa: @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:CCNA(CDKN1A) -> @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:CCNA(CDKN1A) kPhE2f
-	PhE2fByCb: @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhE2f
+	PhE2fByCa: @cell:E2F(DBD!?,RB1!?,Ser332~u) + @cell:CCNA(CDKN1A) -> @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:CCNA(CDKN1A) kPhE2f
+	PhE2fByCb: @cell:E2F(DBD!?,RB1!?,Ser332~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhE2f
 	DppE2f: @cell:E2F(DBD!?,RB1!?,Ser332~p) -> @cell:E2F(DBD!?,RB1!?,Ser332~u) kDpE2f1
-    DppE2fByB55: @cell:E2F(DBD,RB1!?,Ser332~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:E2F(DBD,RB1!?,Ser332~u) + @cell:PPP2R2B(ENSA_ARPP19) kDpE2f2
+    DppE2fByB55: @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:E2F(DBD!?,RB1!?,Ser332~u) + @cell:PPP2R2B(ENSA_ARPP19) kDpE2f2
     DeE2f2: @cell:E2F(DBD!?,RB1!?,Ser332~p) + @cell:SKP2() -> @cell:SKP2() kDeE2f2 DeleteMolecules
 	PhRbByCd: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCND() -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCND() kPhRbD
 	PhRbByCe: @cell:RB1(E2F,Ser807_Ser811~u) + @cell:CCNE(CDKN1A) -> @cell:RB1(E2F,Ser807_Ser811~p) + @cell:CCNE(CDKN1A) kPhRbE
@@ -235,22 +240,22 @@ begin reaction rules
 	PhApcByCa: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
 	PhApcByCb: @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:APC(FZR1_CDC20!?,FBXO5!?,Ser355~p) kPhApcA
 	DppApcByB55_1: @cell:APC(Ser355~p) -> @cell:APC(Ser355~u) kDpApc_1 exclude_reactants(1,CDC20())
-	DppApcByB55_2: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc_2 exclude_reactants(1,CDC20()) 
+	DppApcByB55_2: @cell:APC(Ser355~p) + @cell:PPP2R2B(ENSA_ARPP19) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:APC(Ser355~u) kDpApc_2 exclude_reactants(1,CDC20())
 	PhCdhApcByCa: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:CCNA(CDKN1A) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA(CDKN1A) kPhCdhA
 	PhCAEByCe: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNE(CDKN1A) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNE(CDKN1A) kPhCAEE
 	PhCAEByCa: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNA(CDKN1A) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNA(CDKN1A) kPhCAEA
 	PhCAEByCb: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCAEB
 	PhCdhApcByCe: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:CCNE(CDKN1A) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNE(CDKN1A) kPhCdhE
 	DeEmi1: @cell:FBXO5(APC!?,FZR1!?,Ser182) -> 0 kDeEmi1 DeleteMolecules
-	DeEmi2: @cell:FBXO5(APC!+,FZR1!+,Ser182~u) -> 0 kDeEmi2 DeleteMolecules # FZR1 is never in complex if phosphorylated. Ditto for Ser182.
+	DeEmi2: @cell:FBXO5(APC!+,FZR1!+,Ser182~u) -> 0 kDeEmi2 DeleteMolecules # FBXO5 is never in complex if phosphorylated.
 	PhEACByCa: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + @cell:CCNA(CDKN1A) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNA(CDKN1A) kPhEmiA
 	PhEACByCb: @cell:APC(FZR1_CDC20!1,FBXO5!3,Ser355).FZR1(APC!1,FBXO5!2,nTerm~u).FBXO5(APC!3,FZR1!2,Ser182) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhEmiB
 	PhEmiByCa: @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNA(CDKN1A) -> @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNA(CDKN1A) kPhEmiA
 	PhEmiByCb: @cell:FBXO5(APC,FZR1,Ser182~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FBXO5(APC,FZR1,Ser182~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhEmiB
 	DppEmi: @cell:FBXO5(APC,FZR1,Ser182~p) -> @cell:FBXO5(APC,FZR1,Ser182~u) kDpEmi
-	DeEmi3: @cell:FBXO5(APC,FZR1,Ser182~p) -> 0  kDeEmi3 DeleteMolecules
+	DeEmi3: @cell:FBXO5(APC,FZR1,Ser182~p) -> 0  kDeEmi3 DeleteMolecules # FBXO5 is never in complex if phosphorylated.
 	SyFox1: 0 -> @cell:FOXM1(DBD,Thr600~u) kSyFox1
-	SyEmi2: @cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) + @cell:FBXO5(APC,FZR1,Ser182~u) kSyEmi2 # Check that E2f is not phosphorylated while in complex with promoters (could become kind of a dead end reaction)
+	SyEmi2: @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) + @cell:FBXO5(APC,FZR1,Ser182~u) kSyEmi2
 	PhCdhByCe: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNE(CDKN1A) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNE(CDKN1A) kPhCdhE
 	PhCdhByCa: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNA(CDKN1A) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNA(CDKN1A) kPhCdhA
 	PhCdhByCb: @cell:FZR1(APC,FBXO5,nTerm~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
@@ -260,19 +265,21 @@ begin reaction rules
 	DeCe3: @cell:CCNE() + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) kPhCeA DeleteMolecules
 	DeCa2: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCa2 DeleteMolecules
 	DeCa3: @cell:CCNA() + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCa3 DeleteMolecules
-	SyFox2: @cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) + @cell:FOXM1(DBD,Thr600~u) kSyFox2
+	SyFox2: @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) + @cell:FOXM1(DBD,Thr600~u) kSyFox2
 	DeFox: @cell:FOXM1(DBD!?,Thr600) -> 0 kDeFox1 DeleteMolecules
-	DeFoxByApcCdh: @cell:FOXM1(DBD,Thr600) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2 DeleteMolecules
+	DeFoxByApcCdh: @cell:FOXM1(DBD!?,Thr600) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeFox2 DeleteMolecules
 	PhFoxByCe: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNE(CDKN1A) -> @cell:CCNE(CDKN1A) + @cell:FOXM1(DBD,Thr600~p) kPhFoxE
 	PhFoxByCa: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNA(CDKN1A) -> @cell:CCNA(CDKN1A) + @cell:FOXM1(DBD,Thr600~p) kPhFoxA
 	PhFoxByCb: @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) + @cell:FOXM1(DBD,Thr600~p) kPhFoxB
-	DppFox: @cell:FOXM1(DBD!?,Thr600~p) -> @cell:FOXM1(DBD!?,Thr600~u) kDpFox
-	SyCb1: 0 -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1 * ikSyCb
-	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2 * ikSyCb
+	DppFox_1: @cell:FOXM1(DBD,Thr600~p) -> @cell:FOXM1(DBD,Thr600~u) kDpFox
+	DppFox_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CDC20_promoter(FOXM1) kDpFox
+	DppFox_3: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD,Thr600~u) + @cell:CCNB_promoter(FOXM1) kDpFox
+	SyCb1: 0 -> @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb1
+	SyCb2: @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CCNB_promoter(FOXM1!1) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kSyCb2
 	DeCb: @cell:CCNB(CDK1_Thr14_Tyr15) -> 0  kDeCb1 DeleteMolecules
 	DeCbByApcCdh: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCb2 DeleteMolecules
 	DeCbByApcCdc: @cell:CCNB(CDK1_Thr14_Tyr15) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kDeCb3 DeleteMolecules
-	DeCdc: @cell:CDC20(APC!?) -> 0 kDeCdc_1 DeleteMolecules # Not 100% sure if this is specified correctly
+	DeCdc: @cell:CDC20(APC!?) -> 0 kDeCdc_1 DeleteMolecules
 	DeCdcByApcCdh: @cell:CDC20(APC!?) + @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) -> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kDeCdc_2 DeleteMolecules
 	SyCdc20_1: 0  -> @cell:CDC20(APC) kSyCdc_1
 	SyCdc20_2: @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) -> @cell:FOXM1(DBD!1,Thr600~p).CDC20_promoter(FOXM1!1) + @cell:CDC20(APC) kSyCdc_2
@@ -293,24 +300,24 @@ begin reaction rules
 	PhEnsa: @cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) + @cell:MASTL(Thr198~p) -> @cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) + @cell:MASTL(Thr198~p) kPhEnsa
 	DppEB55: @cell:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) -> @cell:PPP2R2B(ENSA_ARPP19) + @cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~u) kDpEnsa
 	SyEmi1: 0 -> @cell:FBXO5(APC,FZR1,Ser182~u) kSyEmi1
-	SyCe2: @cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) + @cell:CCNE(CDKN1A) kSyCe2
+	SyCe2: @cell:E2F(DBD!1,RB1).CCNE_promoter(E2F!1) -> @cell:E2F(DBD!1,RB1).CCNE_promoter(E2F!1) + @cell:CCNE(CDKN1A) kSyCe2
 	PhCdhApcByCb: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~p) + @cell:CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCdhB
 	AsE2fRb: @cell:E2F(DBD,RB1,Ser332) + @cell:RB1(E2F,Ser807_Ser811~u) <-> @cell:E2F(DBD,RB1!1,Ser332).RB1(E2F!1,Ser807_Ser811~u) kAsE2fRb,kDiE2fRb
 	AsApcCdh: @cell:APC(FZR1_CDC20,FBXO5,Ser355) + @cell:FZR1(APC,FBXO5,nTerm~u) <-> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) kAsACdh,kDiACdh
 	AsACE: @cell:APC(FZR1_CDC20!1,FBXO5,Ser355).FZR1(APC!1,FBXO5,nTerm~u) + @cell:FBXO5(APC,FZR1,Ser182~u) <-> @cell:APC(FZR1_CDC20!1,FBXO5!2,Ser355).FZR1(APC!1,FBXO5!3,nTerm~u).FBXO5(APC!2,FZR1!3,Ser182~u) kAsACE,kDiACE
 	AspApcCdc20: @cell:APC(FZR1_CDC20,FBXO5,Ser355~p) + @cell:CDC20(APC) <-> @cell:APC(FZR1_CDC20!1,FBXO5,Ser355~p).CDC20(APC!1) kAspACdc, kDipACdc
 	AspEB55: @cell:ENSA_ARPP19(PPP2R2B,Ser62_Ser67~p) + @cell:PPP2R2B(ENSA_ARPP19) <-> @cell:ENSA_ARPP19(PPP2R2B!1,Ser62_Ser67~p).PPP2R2B(ENSA_ARPP19!1) kAspEB55,kDipEB55
-	AsE2fProCe: @cell:E2F(DBD,RB1,Ser332~u) + @cell:CCNE_promoter(E2F) <-> @cell:E2F(DBD!1,RB1,Ser332~u).CCNE_promoter(E2F!1) kAsEPx, kDiEPx
-	AsE2fProCa: @cell:E2F(DBD,RB1,Ser332~u) + @cell:CCNA_promoter(E2F) <-> @cell:E2F(DBD!1,RB1,Ser332~u).CCNA_promoter(E2F!1) kAsEPx, kDiEPx
-	AsE2fProE2f: @cell:E2F(DBD,RB1,Ser332~u) + @cell:E2F_promoter(E2F) <-> @cell:E2F(DBD!1,RB1,Ser332~u).E2F_promoter(E2F!1) kAsEPx, kDiEPx
-	AsE2fProEmi: @cell:E2F(DBD,RB1,Ser332~u) + @cell:FBXO5_promoter(E2F) <-> @cell:E2F(DBD!1,RB1,Ser332~u).FBXO5_promoter(E2F!1) kAsEPx, kDiEPx
-	AsE2fProFox: @cell:E2F(DBD,RB1,Ser332~u) + @cell:FOXM1_promoter(E2F) <-> @cell:E2F(DBD!1,RB1,Ser332~u).FOXM1_promoter(E2F!1) kAsEPx, kDiEPx
+	AsE2fProCe: @cell:E2F(DBD,RB1) + @cell:CCNE_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).CCNE_promoter(E2F!1) kAsEPx, kDiEPx
+	AsE2fProCa: @cell:E2F(DBD,RB1) + @cell:CCNA_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).CCNA_promoter(E2F!1) kAsEPx, kDiEPx
+	AsE2fProE2f: @cell:E2F(DBD,RB1) + @cell:E2F_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).E2F_promoter(E2F!1) kAsEPx, kDiEPx
+	AsE2fProEmi: @cell:E2F(DBD,RB1) + @cell:FBXO5_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).FBXO5_promoter(E2F!1) kAsEPx, kDiEPx
+	AsE2fProFox: @cell:E2F(DBD,RB1) + @cell:FOXM1_promoter(E2F) <-> @cell:E2F(DBD!1,RB1).FOXM1_promoter(E2F!1) kAsEPx, kDiEPx
 	SySkp2: 0 -> @cell:SKP2() kSySkp2
 	DeSkp2_1: @cell:SKP2() -> 0 kDeSkp2_1 DeleteMolecules
 	DeSkp2_2: @cell:SKP2() + @cell:APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) -> @cell:APC(FZR1_CDC20!1,FBXO5).FZR1(APC!1,FBXO5) kDeSkp2_2 DeleteMolecules
-	AsTP53PCDKN1A: @cell:TP53(DBD,Ser15~p) + @cell:CDKN1A_promoter(TP53) <-> @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) kAsTP53PCDKN1A, kDiTP53PCDKN1A
+	AsTP53PCDKN1A: @cell:TP53(DBD,Ser15~p) + @cell:CDKN1A_promoter(TP53) <-> @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) kAsTP53PCDKN1A, kDiTP53PCDKN1A	
 	SyCDKN1A_1: 0 -> @cell:CDKN1A(CCNE_A_B,Ser130~u) kSyCDKN1A_1
-	SyCDKN1A_2: @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) -> @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) + @cell:CDKN1A(CCNE_A_B,Ser130~u) kSyCDKN1A_2
+ 	SyCDKN1A_2: @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) -> @cell:TP53(DBD!1,Ser15~p).CDKN1A_promoter(TP53!1) + @cell:CDKN1A(CCNE_A_B,Ser130~u) kSyCDKN1A_2
 	DeCDKN1A_1: @cell:CDKN1A() -> 0 kDeCDKN1A_1 DeleteMolecules
 	DeCDKN1A_2: @cell:CDKN1A(Ser130~p) + @cell:SKP2() -> @cell:SKP2() kDeCDKN1A_2 DeleteMolecules
 	DeCDKN1A_3: @cell:CDKN1A(Ser130~u) + @cell:SKP2() -> @cell:SKP2() kDeCDKN1A_2 DeleteMolecules  # There seems contraticting evidence as to whether Ser130 phosphorylation stabilizes of destabilizes CDKN1A.
@@ -329,25 +336,26 @@ begin reaction rules
 	PhCdkn1aCaByCb: @cell:CDKN1A(CCNE_A_B!1,Ser130~u).CCNA(CDKN1A!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1A(CCNE_A_B,Ser130~p) + CCNA(CDKN1A) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
 	PhCdkn1aCeByCb: @cell:CDKN1A(CCNE_A_B!1,Ser130~u).CCNE(CDKN1A!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1A(CCNE_A_B,Ser130~p) + CCNE(CDKN1A) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
 	PhCdkn1aCbByCb: @cell:CDKN1A(CCNE_A_B!1,Ser130~u).CCNB(CDKN1A!1) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) -> @cell:CDKN1A(CCNE_A_B,Ser130~p) + CCNB(CDKN1A) + CCNB(CDKN1A,CDK1_Thr14_Tyr15~u) kPhCDKN1AByCb
-	# Hypothetical: CDKN1A Ser130 phosphorylation by CCNA (but there is no evidence for that.
 	DpCDKN1A: @cell:CDKN1A(Ser130~p) -> @cell:CDKN1A(Ser130~u) kDpCDKN1A
 end reaction rules
 end model
 
 generate_network({overwrite=>1})
 writeSBML()
+#simulate({method=>"ode",t_end=>1e6,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
+
 simulate({method=>"ode",t_end=>0.73e5,n_steps=>1e3,atol=>1e-8,rtol=>1e-8})
 saveConcentrations();
-setConcentration("@cell:TP53(DBD,Ser15~p)","1*6.022e23");
+setConcentration("@cell:TP53(DBD,Ser15~p)","1*1");
 simulate({method=>"ode",continue=>1,t_start=>0.73e5,t_end=>1.5e5,n_steps=>1e3});
 saveConcentrations();
-setConcentration("@cell:TP53(DBD,Ser15~p)","0*6.022e23");
+setConcentration("@cell:TP53(DBD,Ser15~p)","0*1");
 simulate({method=>"ode",continue=>1,t_start=>1.5e5,t_end=>2.8e5,n_steps=>1e3});
 saveConcentrations();
-setConcentration("@cell:TP53(DBD,Ser15~p)","1*6.022e23");
+setConcentration("@cell:TP53(DBD,Ser15~p)","1*1");
 simulate({method=>"ode",continue=>1,t_start=>2.8e5,t_end=>3.2e5,n_steps=>1e3});
 saveConcentrations();
-setConcentration("@cell:TP53(DBD,Ser15~p)","0*6.022e23");
-simulate({method=>"ode",continue=>1,t_start=>3.2e5,t_end=>3.7e5,n_steps=>1e3});
+setConcentration("@cell:TP53(DBD,Ser15~p)","0*1");
+simulate({method=>"ode",continue=>1,t_start=>3.2e5,t_end=>4.0e5,n_steps=>1e3});
 
 #simulate({method=>"ssa",t_end=>100,n_steps=>4e2})
