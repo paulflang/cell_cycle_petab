@@ -16,5 +16,3 @@ Models are of different degree of complexity.
 * v4.0.0: added compartments.
 * v4.0.1: scaled promoters to 2 per cell; added observables.
 
-## License
-The package is released under the [MIT license](./LICENSE).
