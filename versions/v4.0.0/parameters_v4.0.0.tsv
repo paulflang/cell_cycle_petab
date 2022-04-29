@@ -68,7 +68,7 @@ kDeCdc_2		log	4.60E-16	4.60E-14	4.60E-15	1	0	uniform
 kDipACdc		log	8.66E-05	8.66E-03	0.000866251	1	0	uniform	
 kAspACdc		log	1.15E-14	1.15E-12	1.15E-13	1	0	uniform	
 kPhApcA		log	1.15E-16	1.15E-14	1.15E-15	1	0	uniform	
-kDpApc_1		log	0.00E+00	0.00E+00	0	1	0	uniform	
+kDpApc_1		log	0.00E+00	0.03	0	1	0	uniform	
 kDpApc_2		log	5.75E-14	5.75E-12	5.75E-13	1	0	uniform	
 kSyFox1		log	8.35E+04	8.35E+06	834650.03	1	0	uniform	
 kSyFox2		log	1.04E-01	1.04E+01	1.039501	1	0	uniform	
@@ -84,8 +84,8 @@ kPhC25B		log	1.15E-14	1.15E-12	1.15E-13	1	0	uniform
 kPhCAEE		log	9.21E-16	9.21E-14	9.21E-15	1	0	uniform	
 kPhCAEA		log	2.30E-14	2.30E-12	2.30E-13	1	0	uniform	
 kPhCAEB		log	2.30E-13	2.30E-11	2.30E-12	1	0	uniform	
-kDpE2f1		log	0.00E+00	0.00E+00	0	1	0	uniform	
-kPhC25A		log	0.00E+00	0.00E+00	0	1	0	uniform	
+kDpE2f1		log	0.00E+00	0.01	0	1	0	uniform	
+kPhC25A		log	0.00E+00	1.66058E-13	0	1	0	uniform	
 kSySkp2		log	1.20E+06	1.20E+08	12044000	1	0	uniform	
 kDeSkp2_1		log	1.00E-05	1.00E-03	0.0001	1	0	uniform	
 kDeSkp2_2		log	3.32E-15	3.32E-13	3.32E-14	1	0	uniform	
@@ -113,8 +113,8 @@ kPhCDKN1BByCe		log	8.30E-15	8.30E-13	8.30E-14	1	0	uniform
 kPhCDKN1BByCa		log	8.30E-14	8.30E-12	8.30E-13	1	0	uniform	
 kPhCDKN1BByCb		log	8.30E-16	8.30E-14	8.30E-15	1	0	uniform	
 kDpCDKN1B		log	2.00E-04	2.00E-02	0.002	1	0	uniform	
-kPhNup		log	4.98E+00	4.98E+02	49.817336	0	0	uniform	
-kDpNup_1		log	2.00E-01	2.00E+01	2	0	0	uniform	
+kPhNup		log	4.98E+00	4.98E+02	0	0	0	uniform	
+kDpNup_1		log	2.00E-01	2.00E+01	0	0	0	uniform	
 kImImCCND_1		log	1.66E-03	1.66E-01	0.016605779	1	0	uniform	
 kExImCCND_1		log	1.66E-03	1.66E-01	0.016605779	0	0	uniform	
 kImImCCNE_CDKN1A_B__1		log	1.66E-03	1.66E-01	0.016605779	1	0	uniform	
@@ -215,8 +215,8 @@ kImImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1		log	1.66E-03	1.66E-01	0.01660577
 kExImCCNA_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1		log	1.66E-03	1.66E-01	0.016605779	0	0	uniform	
 kImImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1		log	1.66E-03	1.66E-01	0.016605779	1	0	uniform	
 kExImCCNE_CDKN1A_B1__CDKN1B_CCNE_A1_Thr187p__1		log	1.66E-03	1.66E-01	0.016605779	0	0	uniform	
-kIm_2		log	1.66E-02	1.66E+00	0.16605779	0	0	uniform	
-kEx_2		log	1.66E-02	1.66E+00	0.16605779	0	0	uniform	
+kIm_2		log	1.66E-02	1.66E+00	0	0	0	uniform	
+kEx_2		log	1.66E-02	1.66E+00	0	0	0	uniform	
 ic_wt_Cyt__CCND		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
 ic_wt_Cyt__CCNE_CDKN1A_B_		lin	1.40E+09	1.40E+11	13986043000	1	0	uniform	
 ic_wt_Cyt__E2F_DBD_RB1_Ser332u_		lin	1.11E+08	1.11E+10	1112806800	1	0	uniform	
@@ -253,7 +253,7 @@ ic_wt_Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67u_		lin	4.98E+09	4.98E+11	49793694000	
 ic_wt_Cyt__ENSA_ARPP19_PPP2R2B_Ser62_Ser67p_		lin	1.98E+06	1.98E+08	19785953	1	0	uniform	
 ic_wt_Cyt__ENSA_ARPP19_PPP2R2B_1_Ser62_Ser67p__PPP2R2B_ENSA_ARPP19_1_		lin	1.04E+09	1.04E+11	10406520000	1	0	uniform	
 ic_wt_Cyt__SKP2		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
-ic_wt_Cyt__TP53_DBD_Ser15p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
+ic_wt_Cyt__TP53_DBD_Ser15p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 ic_wt_Cyt__FOXO_DBD_		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
 ic_wt_Num__NUP_pSitesu_		lin	2.98E+02	2.98E+04	2980.89	1	0	uniform	
 ic_wt_Nuc__CCND		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
@@ -311,36 +311,36 @@ ic_wt_Nuc__E2F_DBD_1_RB1_Ser332p__E2F_promoter_E2F_1_		lin	0.00E+00	0.00E+00	0	0
 ic_wt_Nuc__E2F_DBD_1_RB1_Ser332p__FBXO5_promoter_E2F_1_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 ic_wt_Nuc__E2F_DBD_1_RB1_Ser332p__FOXM1_promoter_E2F_1_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 ic_wt_Nuc__SKP2		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
-ic_wt_Nuc__TP53_DBD_Ser15p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
+ic_wt_Nuc__TP53_DBD_Ser15p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 ic_wt_Nuc__CDKN1A_promoter_TP53_		lin	6.02E+05	6.02E+07	6022000	0	0	uniform	
 ic_wt_Nuc__FOXO_DBD_		lin	6.02E+09	6.02E+11	6.02E+10	0	0	uniform	
 ic_wt_Nuc__CDKN1B_promoter_FOXO_		lin	6.02E+05	6.02E+07	6022000	0	0	uniform	
 ic_wt_Nuc__CDKN1A_promoter_TP53_1__TP53_DBD_1_Ser15p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
-ic_wt_Cyt__CDKN1A_CCNE_A_B_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
+ic_wt_Cyt__CDKN1A_CCNE_A_B_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 ic_wt_Nuc__CDKN1B_promoter_FOXO_1__FOXO_DBD_1_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
-ic_wt_Cyt__CDKN1B_CCNE_A_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CDKN1A_CCNE_A_B_Ser130p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CDKN1B_CCNE_A_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CDKN1A_CCNE_A_B_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CDKN1B_CCNE_A_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CDKN1A_CCNE_A_B_Ser130p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CDKN1B_CCNE_A_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
-ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	1	0	uniform	
+ic_wt_Cyt__CDKN1B_CCNE_A_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CDKN1A_CCNE_A_B_Ser130p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CDKN1B_CCNE_A_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CDKN1A_CCNE_A_B_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CDKN1B_CCNE_A_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNB_CDK1_Thr14_Tyr15u_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNB_CDK1_Thr14_Tyr15p_CDKN1A_1__CDKN1A_CCNE_A_B_1_Ser130u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CDKN1A_CCNE_A_B_Ser130p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Cyt__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187u_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CDKN1B_CCNE_A_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNA_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
+ic_wt_Nuc__CCNE_CDKN1A_B_1__CDKN1B_CCNE_A_1_Thr187p_		lin	0.00E+00	0.00E+00	0	0	0	uniform	
 oCCNA		lin	0	0.305627054	0.199282076	1	0	laplace	0;1
 oCCNB		lin	0	0.534931031	0.26502903	1	0	laplace	0;1
 oCCNE		lin	0	0.625025635	0.406140765	1	0	laplace	0;1
@@ -349,13 +349,13 @@ oRB1_pSer807Ser811		lin	0	0.092359914	0.066023738	1	0	laplace	0;1
 oSKP2		lin	0	0.325469225	0.20664715	1	0	laplace	0;1
 oCDKN1A		lin	0	0.569668525	0.368200373	1	0	laplace	0;1
 oCDKN1B		lin	0	0.534762112	0.246232266	1	0	laplace	0;1
-sCCNA		lin	2E-12	2E-10	2E-11	1	1	laplace	0;0.0000000002
-sCCNB		lin	2E-12	2E-10	2E-11	1	1	laplace	0;0.0000000002
-sCCNE		lin	2E-12	2E-10	2E-11	1	1	uniform	
-sE2F		lin	2E-12	2E-10	2E-11	1	1	uniform	
-sRB1_pSer807Ser811		lin	2E-12	2E-10	2E-11	1	1	uniform	
-sSKP2		lin	2E-12	2E-10	2E-11	1	1	uniform	
-sCDKN1A		lin	2E-12	2E-10	2E-11	1	1	uniform	0;0.0000000002
-sCDKN1B		lin	2E-12	2E-10	2E-11	1	1	uniform	0;0.0000000002
+sCCNA		lin	2.00E-12	2.00E-10	2.00E-11	1	1	laplace	0;0.0000000002
+sCCNB		lin	2.00E-12	2.00E-10	2.00E-11	1	1	laplace	0;0.0000000002
+sCCNE		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	
+sE2F		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	
+sRB1_pSer807Ser811		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	
+sSKP2		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	
+sCDKN1A		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	0;0.0000000002
+sCDKN1B		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	0;0.0000000002
 noiseParameter1		lin	0	0	0	0	0	uniform	
 noiseParameter2		lin	0.1	10	1	0	0	uniform	
