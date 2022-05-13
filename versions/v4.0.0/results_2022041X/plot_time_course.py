@@ -13,8 +13,8 @@ import pandas as pd
 file_dir = '.'  # os.path.dirname(__file__)
 out_file = os.path.join(file_dir, 'optimisation_rs1')
 # res_par = {'file': os.path.join(file_dir, 'PEtab_PLang_problem_v12.xlsx'), 'sheet': 'PEtab_PLANG_real_data_v2_it13', 'best': 'SaCeSS local solver DHC run07'}
-yaml_config = os.path.join(file_dir, 'v4.0.0_plot.yaml')
-yaml_config_opt = os.path.join(file_dir, '..', 'v4.0.0.yaml')
+yaml_config_plot = os.path.join(file_dir, 'v4.0.0_plot.yaml')
+yaml_config = os.path.join(file_dir, '..', 'v4.0.0.yaml')
 create_second_cycle = False
 #############################################################
 
@@ -25,7 +25,7 @@ create_second_cycle = False
 # Plug in and write to *_optimized.tsv
 
 # Simulation
-petab_problem = petab.Problem.from_yaml(yaml_config_opt)  # yaml_config_opt)
+petab_problem = petab.Problem.from_yaml(yaml_config)  # yaml_config_plot)
 # petab.flatten_timepoint_specific_output_overrides(petab_problem)
 
 # Second cycle
