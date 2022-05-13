@@ -1,4 +1,4 @@
-observableId	simulationConditionId	measurement	time	noiseParameters			
+observableId	simulationConditionId	measurement	time	noiseParameters_off			
 obs_cycA__nuc_median	wt	0.760224341	0	1			
 obs_cycA__nuc_median	wt	0.619988707	164.6044632	0.998845422			
 obs_cycA__nuc_median	wt	0.634750419	329.4838944	0.997692177			
