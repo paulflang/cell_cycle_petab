@@ -85,7 +85,7 @@ kPhCAEE		log	9.21E-16	9.21E-14	9.21E-15	1	0	uniform
 kPhCAEA		log	2.30E-14	2.30E-12	2.30E-13	1	0	uniform	
 kPhCAEB		log	2.30E-13	2.30E-11	2.30E-12	1	0	uniform	
 kDpE2f1		log	0.00E+00	0.01	0	1	0	uniform	
-kPhC25A		log	0.00E+00	1.66058E-13	0	1	0	uniform	
+kPhC25A		log	0.00E+00	1.66E-13	0	1	0	uniform	
 kSySkp2		log	1.20E+06	1.20E+08	12044000	1	0	uniform	
 kDeSkp2_1		log	1.00E-05	1.00E-03	0.0001	1	0	uniform	
 kDeSkp2_2		log	3.32E-15	3.32E-13	3.32E-14	1	0	uniform	
@@ -358,4 +358,19 @@ sSKP2		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform
 sCDKN1A		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	0;0.0000000002
 sCDKN1B		lin	2.00E-12	2.00E-10	2.00E-11	1	1	uniform	0;0.0000000002
 noiseParameter1		lin	0	0	0	0	0	uniform	
-noiseParameter2		lin	0.1	10	1	0	0	uniform	
+noiseParameter2_cycA_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_cycB1_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_cycE_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_E2F1_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_pRB_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_Skp2_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_p21_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_p27_nuc		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_cycA_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_cycB1_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_cycE_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_E2F1_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_pRB_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_Skp2_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_p21_cyt		lin	0.01	2	1	1	1	uniform	
+noiseParameter2_p27_cyt		lin	0.01	2	1	1	1	uniform	
