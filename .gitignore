@@ -1,4 +1,4 @@
-# Directories
+# General
 *.metadata
 .venv
 .wenv
@@ -9,6 +9,8 @@
 *.project
 *trash*
 
+# More specific
+versions/test_cBNGL/
 versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v6.xlsx
 versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v7.xlsx
 versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v8.xlsx
@@ -42,5 +44,14 @@ versions/v4.0.0/make_petab_compatible.py
 versions/v4.0.0/means.csv
 versions/v4.0.0/notes.md
 versions/v4.0.0/results/
-versions/v4.0.0/results_20220621/
+versions/v4.0.0/parameters_v4.0.0_v1.tsv
+versions/v4.0.0/results_2022041X/optimisation1.png
+versions/v4.0.0/results_2022041X/optimisation1.tsv
+versions/v4.0.0/results_2022041X/optimisation_rs.png
+versions/v4.0.0/results_2022041X/optimisation_rs.tsv
+versions/v4.0.0/results_2022041X/optimisation_rs1.png
+versions/v4.0.0/results_2022041X/optimisation_rs1.tsv
+versions/v4.0.0/results_2022041X/parameters_v4.0.0_optimized.tsv
+versions/v4.0.0/results_2022041X/v4.0.0_plot.yaml
+versions/v4.0.0/results_20220530/parameters_v4.0.0_.tsv
 versions/v4.0.0/smoothened_data.xlsx
