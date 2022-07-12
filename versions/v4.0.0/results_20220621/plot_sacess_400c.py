@@ -84,8 +84,8 @@ styles = [matplotlib.lines.Line2D([], [], color='k', marker='_', linestyle='None
             markersize=8, label='Optimisation'),
           matplotlib.lines.Line2D([], [], color='k', marker='o', linestyle='None',
             markersize=2, markerfacecolor='none', label='Data')]
-handles = handles  # + styles
-b.legend(handles=handles, frameon=True, fontsize=8, loc='lower left', bbox_to_anchor=(0.05, -1.95)) # lower right 1.025, -1.75
+handles = handles + styles
+b.legend(handles=handles, frameon=True, fontsize=8, loc='lower left', bbox_to_anchor=(0.05, -2.03), labelspacing=0.3) # lower right 1.025, -1.75
 
 # Labelling
 b.set_xlabel(x_label)
