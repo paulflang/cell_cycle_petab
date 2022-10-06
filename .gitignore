@@ -1,0 +1,56 @@
+# General
+*.metadata
+.venv
+.wenv
+.wenv1
+*.our_rcp_workspace
+
+*.diff
+*.project
+*trash*
+
+# More specific
+versions/test_cBNGL/
+versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v6.xlsx
+versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v7.xlsx
+versions/v3.0.0/PEtab_PL_v3_0_0/PEtab_PLang_problem_v8.xlsx
+versions/v3.0.0/PEtab_PL_v3_0_0/results_20220309_manual/
+versions/v3.0.0/PEtab_PL_v3_0_0/results_20220321_manual/
+versions/v3.0.0/PEtab_PL_v3_0_0/results_20220323_fix_observables/
+versions/v3.0.0/results/
+versions/v3.0.1/.project
+versions/v3.0.1/cell_cycle_v3.0.1_test.bngl
+versions/v3.0.1/cell_cycle_v3.0.1_test1.bngl
+versions/v3.0.1/observables_v3.0.1 - Copy.tsv
+versions/v3.0.1/plot_time_course.py
+versions/v3.0.1/results/
+versions/v3.0.1/results_20220412/
+versions/v3.0.1/visualizationSpecification_cell_cycle_v3.0.1 - Copy.tsv
+versions/v3.1.0/make_petab_compatible.py
+versions/v3.1.0/plot_time_course.py
+versions/v3.1.0/results/
+versions/v3.1.0/results_20220415/
+versions/v3.1.0/update_models.py
+versions/v3.2.0/make_petab_compatible.py
+
+
+versions/v4.0.0/2021_Stallaert_all.csv
+versions/v4.0.0/cell_cycle_v4.0.0_petab.xml
+versions/v4.0.0/cell_cycle_v4.0.0_sbml.xml
+versions/v4.0.0/cell_cycle_v4.0.0rs.bngl
+versions/v4.0.0/cell_cycle_v4.0.0rs_sbml.xml
+versions/v4.0.0/get_scaling.py
+versions/v4.0.0/make_petab_compatible.py
+versions/v4.0.0/means.csv
+versions/v4.0.0/notes.md
+versions/v4.0.0/results/
+versions/v4.0.0/results_2022041X/optimisation1.png
+versions/v4.0.0/results_2022041X/optimisation1.tsv
+versions/v4.0.0/results_2022041X/optimisation_rs.png
+versions/v4.0.0/results_2022041X/optimisation_rs.tsv
+versions/v4.0.0/results_2022041X/optimisation_rs1.png
+versions/v4.0.0/results_2022041X/optimisation_rs1.tsv
+versions/v4.0.0/results_2022041X/parameters_v4.0.0_optimized.tsv
+versions/v4.0.0/results_2022041X/v4.0.0_plot.yaml
+versions/v4.0.0/results_20220530/parameters_v4.0.0_.tsv
+versions/v4.0.0/smoothened_data.xlsx
