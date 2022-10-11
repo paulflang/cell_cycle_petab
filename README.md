@@ -12,5 +12,3 @@ Models are of different degree of complexity.
 * v3.1.0: added DNA damage checkpoint (SKP2 and TP53 and CDKN1A).
 * v3.2.0: added CDKN1B.
 * v4.0.0: added compartments.
-* v4.0.1: scaled promoters to 2 per cell; added observables.
-
