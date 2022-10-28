@@ -68,7 +68,7 @@ kDeCdc_2		log	4.60E-17	4.60E-13	2.45E-13	1	0	uniform
 kDipACdc		log	8.66E-07	0.008660178	0.000473397	1	0	uniform	
 kAspACdc		log	8.01E-14	1.24E-10	9.67E-14	1	0	uniform	
 kPhApcA		log	1.15E-15	1.15E-13	4.50E-14	1	0	uniform	
-kDpApc_1		log	0.00E+00	0.03	0	1	0	uniform	
+kDpApc_1		log		0.03	0	1	0	uniform	
 kDpApc_2		log	5.75E-14	5.75E-11	2.84E-12	1	0	uniform	
 kSyFox1		log	83499.84045	8350232.995	103504.4168	1	0	uniform	
 kSyFox2		log	0.104000456	1040.004168	8.753057534	1	0	uniform	
@@ -84,8 +84,8 @@ kPhC25B		log	1.30E-16	1.15E-12	4.46E-13	1	0	uniform
 kPhCAEE		log	9.07E-16	9.21E-14	2.64E-14	1	0	uniform	
 kPhCAEA		log	2.30E-14	2.04E-10	8.19E-11	1	0	uniform	
 kPhCAEB		log	7.69E-13	3.64E-08	2.29E-09	1	0	uniform	
-kDpE2f1		log	0.00E+00	0.010000002	0	1	0	uniform	
-kPhC25A		log	0.00E+00	0.010000002	0	1	0	uniform	
+kDpE2f1		log		0.010000002	0	1	0	uniform	
+kPhC25A		log		0.010000002	0	1	0	uniform	
 kSySkp2		log	1199961.463	119999723.9	110013557.9	1	0	uniform	
 kDeSkp2_1		log	1.07E-07	0.000999995	7.13E-06	1	0	uniform	
 kDeSkp2_2		log	3.32E-15	3.32E-13	5.14E-15	1	0	uniform	
