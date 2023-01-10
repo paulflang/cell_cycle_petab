@@ -16,7 +16,7 @@
 #   * we may be able to obtain prior estimates of observation function parameters
 
 format_version: 1
-parameter_file: parameters_v4.0.0_v12.tsv
+parameter_file: parameters_v4.0.0_v13.tsv
 problems:
 - condition_files:
   - experimentalCondition_v4.0.0.tsv
