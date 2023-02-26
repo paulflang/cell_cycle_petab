@@ -12,3 +12,20 @@ Models are of different degree of complexity.
 * v3.1.0: added DNA damage checkpoint (SKP2 and TP53 and CDKN1A).
 * v3.2.0: added CDKN1B.
 * v4.0.0: added compartments.
+
+
+## Navigating the repository
+
+This repository contains a `/versions/` directory with subdirectories for the versions mentioned above and Excel documents containing the raw output of the saCeSS optimiser. The `/versions/v*` directories contain YAML files specifying the PEtab problem for the latest optimisation run. Often, preliminary runs had do be performed to refine the optimisation procedure (e.g. updating bounds). Files in `/versions/v*` that are not mentioned in the YAML file were typically used for preliminary runs.
+
+### The `/versions/v*results_/` directories
+
+The `/versions/v*results_/` directories often contain a `sacess_to_petab.py` script, which extracts an optimisation result from Excel (saCeSS raw output) and plugs them as `nominalValues` into a `parameters_v*_optimized.tsv` file. `plot_time_cours.py` scripts simulate the results and produce an `optimisation.tsv` file. Sometimes (manual) modifications such as removing noise parameters from the parameter and observable tables were necessary to run the simulation. `plot_sacess_*_manu.py` scripts use the `optimisation.tsv` file to plot figures in manuscript quality.
+
+## Manuscript figures
+
+Figures for the manuscript *Reusable rule-based cell cycle model explains compartment-resolved dynamics of 16 observables in RPE-1 cells* that show solutions to PEtab problems can be plotted with the following scrips:
+
+- [Supplementary Figure 10](/versions/v3.0.1/results_20220421/v3.0.1_manu.png): [`/versions/v3.0.1/results_20220421/plot_sacess_301_manu.py`](/versions/v3.0.1/results_20220421/plot_sacess_301_manu.py)
+- [Supplementary Figure 11](/versions/v3.2.0/results_20220421/v3.2.0_manu.png): [`/versions/v3.2.0/results_20220421/plot_sacess_320_manu.py`](/versions/v3.2.0/results_20220421/plot_sacess_320_manu.py)
+- [Figure 9](/versions/v4.0.0/results_20230120/v4.0.0_manu.png): [`/versions/v4.0.0/results_20230120/plot_sacess_400_manu.py`](/versions/v4.0.0/results_20230120/plot_sacess_400_manu.py)
