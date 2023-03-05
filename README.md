@@ -1,5 +1,7 @@
 # `cell_cycle_petab`
 
+[![DOI](https://zenodo.org/badge/426996673.svg)](https://zenodo.org/badge/latestdoi/426996673)
+
 `cell_cycle_petab` is a repository that stores several cell cycle model versions and their corresponding PEtab problems. The data in the measurement tables stems from snapshot measurements by [Stallaert et al. (2021)](https://github.com/paulflang/cell_cycle_time_course/blob/main/4i_stallaert/raw.md). Pseudo-time courses were reconstructed with [reCAT](https://github.com/tinglab/reCAT). Visualisations of these time courses can be found in the [cell_cycle_time_course](https://github.com/paulflang/cell_cycle_time_course) repository. The model generation process is documented in the [cell_cycle_model](https://github.com/paulflang/cell_cycle_model) repository. For further details, please refer to [Paul Lang's dissertation](https://ora.ox.ac.uk/objects/uuid:888439ad-99ac-4e89-9473-cc4864cf1e94).
 
 ## Models
