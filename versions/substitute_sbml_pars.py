@@ -5,7 +5,6 @@ base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Options
 fig2yaml = {
-    "Figure 8": os.path.join(base_dir, "v3.0.0", "PEtab_PL_v3_0_0sim", "results_20211130", "v3.0.0_plot.yaml"),
     "Figure 9": os.path.join(base_dir, "v4.0.0", "results_20230307", "v4.0.0_plot.yaml"),
     "Figure S10": os.path.join(base_dir, "v3.0.1", "results_20220421", "v3.0.1_plot.yaml"),
     "Figure S11": os.path.join(base_dir, "v3.2.0", "results_20220421", "v3.2.0_plot.yaml")
