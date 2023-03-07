@@ -3,11 +3,16 @@
 .venv
 .wenv
 .wenv1
+.vscode
 *.our_rcp_workspace
 
 *.diff
 *.project
 *trash*
+*poster*
+*presentation*
+*_manu.pdf
+*_manu.svg
 
 # More specific
 versions/test_cBNGL/
