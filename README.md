@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/426996673.svg)](https://zenodo.org/badge/latestdoi/426996673)
 
-`cell_cycle_petab` is a repository that stores several cell cycle model versions and their corresponding PEtab problems. The data in the measurement tables stems from snapshot measurements by [Stallaert et al. (2021)](https://github.com/paulflang/cell_cycle_time_course/blob/main/4i_stallaert/raw.md). Pseudo-time courses were reconstructed with [reCAT](https://github.com/tinglab/reCAT). Visualisations of these time courses can be found in the [cell_cycle_time_course](https://github.com/paulflang/cell_cycle_time_course) repository. The model generation process is documented in the [cell_cycle_model](https://github.com/paulflang/cell_cycle_model) repository. For further details, please refer to [Paul Lang's dissertation](https://ora.ox.ac.uk/objects/uuid:888439ad-99ac-4e89-9473-cc4864cf1e94).
+`cell_cycle_petab` is a repository that stores several cell cycle model versions and their corresponding PEtab problems. The data in the measurement tables stems from snapshot measurements by [Stallaert et al. (2021)](https://github.com/paulflang/cell_cycle_time_course/blob/main/4i_stallaert/raw.md) in RPE1 cells. Pseudo-time courses were reconstructed with [reCAT](https://github.com/tinglab/reCAT). Visualisations of these time courses can be found in the [cell_cycle_time_course](https://github.com/paulflang/cell_cycle_time_course) repository. The model generation process is documented in the [cell_cycle_model](https://github.com/paulflang/cell_cycle_model) repository. For further details, please refer to [Paul Lang's dissertation](https://ora.ox.ac.uk/objects/uuid:888439ad-99ac-4e89-9473-cc4864cf1e94).
 
 ## Models
 
@@ -34,3 +34,12 @@ Figures for the manuscript *Reusable rule-based cell cycle model explains compar
     - [`/versions/v3.2.0/results_20220421/plot_sacess_320_manu.py`](/versions/v3.2.0/results_20220421/plot_sacess_320_manu.py)
 - [Figure 9](/versions/v4.0.0/results_20230120/v4.0.0_manu.png):
     - [`/versions/v4.0.0/results_20230120/plot_sacess_400_manu.py`](/versions/v4.0.0/results_20230120/plot_sacess_400_manu.py)
+- [Figure 10](/versions/v4.0.0/results_20230307/v4.0.0_manu.png):
+    - [`/versions/v4.0.0/results_20230307/plot_sacess_400_manu.py`](/versions/v4.0.0/results_20230307/plot_sacess_400_manu.py)
+
+## Barebones SBML models fitted to RPE1 data
+
+Barebones SBML files with parameters optimized to fit the time courses of RPE1 cells can be found for the following model versions:
+- [v3.0.1](/versions/v3.0.1/results_20220421/v3.0.1_optimized.sbml)
+- [v3.2.0](/versions/v3.2.0/results_20220421/v3.2.0_optimized.sbml)
+- [v4.0.0](/versions/v4.0.0/results_20230307/v4.0.0_optimized.sbml)
