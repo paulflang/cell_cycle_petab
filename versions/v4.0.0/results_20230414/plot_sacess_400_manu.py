@@ -23,7 +23,7 @@ T = np.array([0, 255, 255])/255
 # Options
 exp = '../Stallaert_CellSystems2021_Data_2rounds.tsv'
 opt = 'optimisation.tsv'
-con = 'convergence_v4.0.0.csv'  # concatenating the sheets PEtab_PL_v4_0_0_comm_Nov14_it1 + PEtab_PL_v4_0_0_comm_Nov14_it2 + PL_v4_0_0_commit_Jan10_2022_it1
+con = 'convergence_v4.0.0.csv'
 image_file = 'v4.0.0_manu' # 'corr_n300_std0.8_vars9.png'
 df_exp = pd.read_csv(exp, sep='\t').pivot(index='time', columns='observableId', values='measurement').iloc[::10, :]
 df_opt = pd.read_csv(opt, sep='\t').pivot(index='time', columns='observableId', values='measurement')
