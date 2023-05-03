@@ -28,8 +28,8 @@ The `/versions/v*results_/` directories often contain a `sacess_to_petab.py` scr
 
 Figures for the manuscript *Reusable rule-based cell cycle model explains compartment-resolved dynamics of 16 observables in RPE-1 cells* that show fits of PEtab problems to RPE1 cells can be plotted with the following scrips:
 
-- [Figure 9](/versions/v4.0.0/results_20230307/v4.0.0_manu.png):
-    - [`/versions/v4.0.0/results_20230307/plot_sacess_400_manu.py`](/versions/v4.0.0/results_20230307/plot_sacess_400_manu.py)
+- [Figure 9](/versions/v4.0.0/results_20230414/v4.0.0_manu.png):
+    - [`/versions/v4.0.0/results_20230414/plot_sacess_400_manu.py`](/versions/v4.0.0/results_20230414/plot_sacess_400_manu.py)
 - [Supplementary Figure 10](/versions/v3.0.1/results_20220421/v3.0.1_manu.png):
     - [`/versions/v3.0.1/results_20220421/plot_sacess_301_manu.py`](/versions/v3.0.1/results_20220421/plot_sacess_301_manu.py)
 - [Supplementary Figure 11](/versions/v3.2.0/results_20220421/v3.2.0_manu.png):
@@ -40,4 +40,4 @@ Figures for the manuscript *Reusable rule-based cell cycle model explains compar
 Barebones SBML files with parameters optimized to fit the time courses of RPE1 cells can be found for the following model versions:
 - [v3.0.1](/versions/v3.0.1/results_20220421/v3.0.1_optimized.sbml)
 - [v3.2.0](/versions/v3.2.0/results_20220421/v3.2.0_optimized.sbml)
-- [v4.0.0](/versions/v4.0.0/results_20230307/v4.0.0_optimized.sbml)
+- [v4.0.0](/versions/v4.0.0/results_20230414/v4.0.0_optimized.sbml)
