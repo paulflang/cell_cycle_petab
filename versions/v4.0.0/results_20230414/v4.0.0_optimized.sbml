@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
   <model id="cell_cycle_v4_0_0rs" substanceUnits="substance" timeUnits="second" volumeUnits="volume" areaUnits="area" lengthUnits="metre" extentUnits="substance">
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#">
+        <rdf:Description rdf:about="my_metaid">
+          <dc:creator rdf:parseType="Resource">
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Given>Paul</vCard:Given>
+                  <vCard:Family>Lang</vCard:Family>
+                </vCard:N>
+                <vCard:ORG>
+                  <vCard:Orgname>University of Oxford</vCard:Orgname>
+                </vCard:ORG>
+                <vCard:EMAIL>plang@biosim.ai</vCard:EMAIL>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
     <listOfUnitDefinitions>
       <unitDefinition id="substance" name="substance">
         <listOfUnits>
