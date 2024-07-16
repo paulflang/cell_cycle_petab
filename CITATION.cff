@@ -1,0 +1,63 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: cell_cycle_petab
+message: >-
+  If you use this software, please cite the preferred-citation in this file.
+preferred-citation:
+  type: article
+  authors:
+  - given-names: Paul
+    name-particle: F
+    family-names: Lang
+    email: plang@deeporigin.com
+    affiliation: Deep Origin
+    orcid: 'https://orcid.org/0000-0002-6388-2405'
+  - given-names: David
+    name-particle: R
+    family-names: Penas
+    affiliation: Computational Biology Lab, MBG-CSIC (Spanish National Research Council), Pontevedra, Spain
+    orcid: 'https://orcid.org/0000-0002-7256-3094'
+  - given-names: Julio
+    name-particle: R
+    family-names: Banga
+    affiliation: Computational Biology Lab, MBG-CSIC (Spanish National Research Council), Pontevedra, Spain
+    orcid: 'https://orcid.org/0000-0002-4245-0320'
+  - given-names: Daniel
+    family-names: Weindl
+    affiliation: Computational Health Center, Helmholtz Zentrum München Deutsches Forschungszentrum für Gesundheit und Umwelt (GmbH), Neuherberg, Germany
+    orcid: 'https://orcid.org/0000-0001-9963-6057'
+  - given-names: Bela
+    family-names: Novak
+    affiliation: Department of Biochemistry, University of Oxford, Oxford, United Kingdom
+    orcid: 'https://orcid.org/0000-0002-6961-1366'
+
+  doi: "10.1371/journal.pcbi.1011151"
+  journal: "PLOS Computational Biology"
+  month: 1
+  title: "Reusable rule-based cell cycle model explains compartment-resolved dynamics of 16 observables in RPE-1 cells"
+  year: 2024
+  keywords:
+    - Cell Cycle
+    - Parameter Estimation
+  license: CC-BY-4.0
+  repository-code: >-
+    https://github.com/paulflang/cell_cycle_petab
+  abstract: >-
+    The mammalian cell cycle is regulated by a well-studied but complex biochemical reaction system.
+    Computational models provide a particularly systematic and systemic description of the
+    mechanisms governing mammalian cell cycle control. By combining both state-of-the-art
+    multiplexed experimental methods and powerful computational tools, this work aims at improving
+    on these models along four dimensions: model structure, validation data, validation methodology
+    and model reusability.
+
+    We developed a comprehensive model structure of the full cell cycle that qualitatively explains
+    the behaviour of human retinal pigment epithelial-1 cells. To estimate the model parameters, time
+    courses of eight cell cycle regulators in two compartments were reconstructed from single cell
+    snapshot measurements. After optimisation with a parallel global optimisation metaheuristic we
+    obtained excellent agreements between simulations and measurements. The PEtab specification of the
+    optimisation problem facilitates reuse of model, data and/or optimisation results.
+
+    Future perturbation experiments will improve parameter identifiability and allow for testing model
+    predictive power. Such a predictive model may aid in drug discovery for cell cycle-related disorders.
